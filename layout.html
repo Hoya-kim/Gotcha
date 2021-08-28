@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=yes, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>갓챠</title>
+</head>
+<body>
+<div class="skipNavigation">
+    <a href="#continue">이어보기 바로가기</a>
+    <a href="#wanted">보고싶어요 바로가기</a>
+    <a href="#trending">인기작 바로가기</a>
+</div>
+<div class="topBanner">
+    <p class="topBanner__desc">왓챠가 그립지 않으세요? 다시 돌아오셔서 모든 영화, 드라마 무제한으로 감상하세요.</p>
+    <div class="topBanner__btnGroup">
+        <button class="topBanner__btnGroup--button btn-primary">이용권 구매</button>
+        <button class="topBanner__btnGroup--button">쿠폰 등록</button>
+    </div>
+</div>
+<header class="header">
+    <h1>
+        <a href="/" class="header__logo">
+            <img src="./images/logo.svg" alt="GOTCHA">
+        </a>
+    </h1>
+    <nav>
+        <h2 class="a11y-hidden">메인 메뉴</h2>
+        <ul class="header__navigation">
+            <li class="header__navigation--item">
+                <a href="/" class="header__navigation--link">홈</a>
+            </li>
+            <li class="header__navigation--item">
+                <button class="header__navigation--button">탐색하기</button>
+            </li>
+            <li class="header__navigation--item">
+                <a href="#" class="header__navigation--link">평가하기</a>
+            </li>
+            <li class="header__navigation--item">
+                <a href="#" class="header__navigation--link">보고싶어요</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="header__searchForm">
+        <h2 class="a11y-hidden">검색 영역</h2>
+        <form>
+            <fieldset>
+                <legend class="a11y-hidden">검색 영역</legend>
+                <button type="button" class="header__searchForm--search">검색</button>
+                <label for="searchInput" class="ally-hidden">검색</label>
+                <input type="search" id="searchInput"/>
+            </fieldset>
+        </form>
+    </div>
+    <div class="header__userConfig">
+        <button class="header__userConfig--open">쓰리박</button>
+        <div class="header__userConfig--list">
+            <ul class="header__userConfig--profile">
+                <li><a href="#"><i class="icon"></i>키즈</a></li>
+                <li><a href="#"><i class="icon icon-add"></i>프로필 추가</a></li>
+                <li><a href="#">프로필 편집</a></li>
+            </ul>
+            <ul class="header__userConfig--watched">
+                <li><a href="#">이어보기</a></li>
+                <li><a href="#">다 본 작품</a></li>
+            </ul>
+            <ul class="header__userConfig--others">
+                <li><a href="#">설정</a></li>
+                <li><a href="#">공지사항</a></li>
+                <li><a href="#">초대하기</a><i class="icon-new"></i></li>
+                <li><a href="#">고객센터</a></li>
+                <li><a href="#">로그아웃</a></li>
+            </ul>
+        </div>
+    </div>
+</header>
+<main class="main">
+    메인 콘텐츠 영역입니다.
+</main>
+<aside class="controller">
+    <a href="#" target="_blank" rel="noopener noreferrer" class="controller__random">
+        <img src="./images/btn-random.svg" alt="갓챠 랜덤플레이">
+    </a>
+    <a href="#" class="controller__topButton">페이지 TOP으로</a>
+</aside>
+<footer class="footer">
+    <ul class="footer__service">
+        <li>
+            <button type="button" class="footer__service--item">갓챠피디아 서비스 이용약관</button>
+        </li>
+        <li>
+            <button type="button" class="footer__service--item"><strong>개인정보 처리 방침</strong></button>
+        </li>
+        <li>
+            <button type="button" class="footer__service--item">왓챠 서비스 이용약관</button>
+        </li>
+        <li>
+            <a href="#" class="footer__service--item">고객센터</a>
+        </li>
+        <li>
+            <a href="#" class="footer__service--item">채용정보</a>
+        </li>
+    </ul>
+    <address class="footer__address">
+        <dl class="footer__address--content">
+            <div class="footer__address--content--item">
+                <dt>고객센터(이용 및 결제 문의)</dt>
+                <dd>
+                    <a href="mailto:cs@watcha.co.kr">cs@watcha.co.kr</a> /
+                    <a href="tel:02-515-9985">02-515-9985(유료)</a>
+                </dd>
+            </div>
+            <div class="footer__address--content--item">
+                <dt>제휴 및 대회 협력</dt>
+                <dd>
+                    <a href="https://watcha.team/contact" target="_blank" rel="noopener noreferrer">https://watcha.team/contact</a>
+                </dd>
+            </div>
+            <div class="footer__address--content--item">
+                <dt>B2B 이용권 구매 문의</dt>
+                <dd>쿠프마케팅(<a href="mailto:m_oper@coopnc.com">m_oper@coopnc.com</a> / <a href="tel:070-4020-5289">070-4020-5289</a>)</dd>
+            </div>
+        </dl>
+        <div class="footer__address--info">
+            <span>주식회사 갓챠</span>
+            <span>대표 김호야</span>
+            <span>서울시 서초구 강남대로 343 신덕빌딩 3층</span>
+            <span>사업자등록번호 211-88-66013</span>
+            <span>통신판매업 신고번호 제 2019-서울서초-0965호</span>
+        </div>
+    </address>
+    <ul class="footer__sns">
+        <li><a href="https://www.facebook.com/watchaKR" target="_blank" rel="noopener noreferrer" class="footer__sns--item facebook">페이스북</a></li>
+        <li><a href="https://twitter.com/watcha_kr" target="_blank" rel="noopener noreferrer" class="footer__sns--item twitter">트위터</a></li>
+        <li><a href="https://www.instagram.com/watcha_kr/" target="_blank" rel="noopener noreferrer" class="footer__sns--item instagram">인스타그램</a></li>
+        <li><a href="https://watcha.team/" target="_blank" rel="noopener noreferrer" class="footer__sns--item blog">블로그</a></li>
+    </ul>
+    <div class="footer__rights">
+        <a href="/" class="footer__right--logo">
+            <img src="./images/footer-logo.svg" alt="GOTCHA">
+        </a>
+        <small class="footer__rights--copyright">Copyright &copy; 2021 by Gotcha, Inc. All rights reserved.</small>
+    </div>
+</footer>
+</body>
+</html>
