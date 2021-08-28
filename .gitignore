@@ -55,6 +55,7 @@ cmake-build-*/
 
 # IntelliJ
 out/
+.idea/
 
 # mpeltonen/sbt-idea plugin
 .idea_modules/
@@ -303,5 +304,6 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+
 
 # End of https://www.toptal.com/developers/gitignore/api/macos,windows,visualstudiocode,intellij,node,sass
