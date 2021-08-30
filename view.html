@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=yes, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>갓챠</title>
+</head>
+<body>
+<div class="topBanner"></div>
+<header class="header"></header>
+<main class="main">
+  <h2 class="a11y-hidden">먹리스트</h2>
+  <!-- 탭 리스트 -->
+    <div class="viewTab"> 
+      <ul class="viewTab__list" role="tablist">
+        <li>
+          <button class="viewTab__list--item" role="tab" 
+          aria-selected="true" aria-controls="basicInfo" id="tab-basic">기본정보</button>
+        </li>
+        <li class="viewTab__list--item">
+          <button class="viewTab__list--item" role="tab" tabindex="-1"
+          aria-selected="false" aria-controls="contentDetail" id="tab-detail">기본정보</button>
+        </li>
+        <li class="viewTab__list--item" >
+          <button class="viewTab__list--item" role="tab" tabindex="-1"
+          aria-selected="false" aria-controls="similarContent" id="tab-similar">기본정보</button>
+        </li>
+      </ul>
+    
+      <!-- 기본 정보 탭 -->
+      <ul class="viewTab__tabPanel">
+        <li class="viewTab__tabPanel--item basic-info" id="basicInfo" 
+        tabindex="0" role="tabpanel" aria-labelledby="tab-basic">기본정보
+          <div class="viewRating">
+            <h2 class="viewRating__title">먹스터디</h2>
+            <div class="viewRating__expect txt-primary">
+              <span>예상</span>
+              <span>4.8</span>
+            </div>
+    
+            <div class="viewRating__avg">
+              <span>평균</span>
+              <span>4.6</span>
+            </div>
+    
+            <p class="viewRating--pg">15세, 2시간 45분</p>
+          </div>
+    
+          <div class="otherFunc">
+            <button class="play">재생</button>
+            <button class="otherFunc__wantList">보고싶어요</button>
+            <p class="otherFunc__survey">평가하기
+              <span class="otherFunc__survey--star is-empty">☆☆☆☆☆</span>
+              <span class="otherFunc__survey--star is-full">★★★★★</span>
+            </p>
+          </div>
+    
+          <div class="summary">
+            <strong class="summary__trending">왓챠피디아 회원들이 가장 보고싶어하는 상위 1% 작품</strong>
+            <p class="summary__desc">8월 28일, 그날이 왔다. 명목상 프로젝트때문에 모였지만, 정작 만나서 온갖 종류의 산해진미를 먹기 시작한다. 
+              그들이 먹은 음식만 나열해도 수십가지, 그 중 그들이 꼽은 최고의 음식을 소개한다. 
+            </p>
+          </div>
+    
+          <dl class="contentInfo">
+            <dt class="contentInfo__director">
+              <dd>감독
+                <a href="#">박태준</a>
+              </dd>
+            </dt>
+    
+            <dt class="contentInfo__cast">
+              <dd>출연
+                <a href="#">김정호</a>
+                <a href="#">박바름</a>
+                <a href="#">박지영</a>
+              </dd>
+            </dt>
+    
+            <dt class="contentInfo__abstract">
+              <dd>개요
+                <a href="#">스릴러</a> /
+              </dd>
+              <dd>
+                <a href="#">한국</a> /
+              </dd>
+                <dd>
+                  <a href="#">2021년</a>
+                </dd>
+            </dt>
+          </dl>
+        </li>
+    
+        <!-- 상세정보 탭 -->
+        <li class="viewTab__viewPanel--item content-detail" id="contentDetail"
+        tabindex="0" role="tabpanel" aria-labelledby="tab-detail">상세정보
+          <dl class="briefInfo">
+            <dt class="briefInfo__director">
+              <dd>감독: 
+                <a href="#">박태준</a>
+              </dd>
+            </dt>
+    
+            <dt class="briefInfo__cast">
+              <dd>출연: 
+                <a href="#">김정호</a>
+                <a href="#">박바름</a>
+                <a href="#">박지영</a>
+                <a href="#">박태준</a>
+                <a href="#">육회초밥</a>
+                <a href="#">빵</a>
+                <a href="#">아이스크림 케이크</a>
+                <a href="#">팝콘</a>
+                <a href="#">견과류</a>
+              </dd>
+            </dt>
+          </dl>
+    
+          <div class="avg-star">
+            <p class="otherFunc__survey">평균별점
+              <span class="otherFunc__survey--star is-empty">☆☆☆☆☆</span>
+              <span class="otherFunc__survey--star is-full">★★★★★</span>
+            </p>
+            <p>4.6</p>
+            <p>97654명</p>
+          </div>
+    
+            <div class="comment">
+              <p class="comment__id">호야와 쓰리박</p>
+              <p class="comment__opinion">이 영화를 보고 육회가 두려워졌다.</p>
+              <button class="commnet__like">232</button> 
+              <button class="commnet__more">더보기</button>
+            </div>
+        </li>
+    
+        <!-- 비슷한 작품 탭 -->
+        <li class="viewTab__viewPanel--item similar-content movieList" id="similarContent"
+        tabindex="0" role="tabpanel" aria-labelledby="tab-similar">비슷한 작품
+          <figure class="movieList__wrap">
+            <picture>
+              <source srcset="#" type="image/webp">
+              <img src="#" alt="서프라이즈 팝콘">
+            </picture>
+            <figcaption class="movieList__wrap--desc">
+              평화로운 토요일, 호야와 쓰리박은 수상한 팝콘을 사게된다. 
+              놀랍게도 그들이 산 팝콘은 2등 상품을 가지고 있었는데... 이 쿠폰을 가지기 위해 치열한 경쟁을 시작하게 된다...!
+            </figcaption>
+          </figure>
+        </li>
+      </ul>
+    </div>
+</main>
+<aside class="controller"></aside>
+<footer class="footer"></footer>
+</body>
+</html>
