@@ -19,11 +19,12 @@
         <button class="topBanner__btnGroup--button btn-primary">이용권 구매</button>
         <button class="topBanner__btnGroup--button">쿠폰 등록</button>
     </div>
+    <button class="topBanner--closeButton" aria-label="배너 닫기"></button>
 </div>
 <header class="header">
     <h1>
         <a href="/" class="header__logo">
-            <img src="./images/logo.svg" alt="GOTCHA">
+            <img src="./src/images/common/logo_top.svg" alt="GOTCHA">
         </a>
     </h1>
     <nav>
@@ -34,6 +35,128 @@
             </li>
             <li class="header__navigation--item">
                 <button class="header__navigation--button">탐색하기</button>
+                <ul class="tabMenu">
+                    <li class="tabMenu__item">
+                        <button type="button" class="tabMenu__header">장르</button>
+                        <ul class="tabMenu__panel">
+                            <li>
+                                <a href="#" class="tabMenu__panel--item item-new">새로 올라온 작품</a>
+                            </li>
+                            <li>
+                                <a href="" class="tabMenu__panel--item">새로운 에피소드</a>
+                            </li>
+                            <li>
+                                <a href="" class="tabMenu__panel--item">공개 예정인 작품</a>
+                            </li>
+                            <li>
+                                <a href="" class="tabMenu__panel--item">왓챠 익스클루시브</a>
+                            </li>
+                            <li>
+                                <a href="" class="tabMenu__panel--item">영어 자막 지원 작품</a>
+                            </li>
+                            <li>
+                                <a href="" class="tabMenu__panel--item">TV 드라마</a>
+                            </li>
+                            <li>
+                                <a href="" class="tabMenu__panel--item">TV 애니메이션</a>
+                            </li>
+                            <li>
+                                <a href="" class="tabMenu__panel--item">재난</a>
+                            </li>
+                            <li>
+                                <a href="" class="tabMenu__panel--item">로맨틱코디미</a>
+                            </li>
+                            <li>
+                                <a href="" class="tabMenu__panel--item">시트콤</a>
+                            </li>
+                            <li>
+                                <a href="" class="tabMenu__panel--item">SF</a>
+                            </li>
+                            <li>
+                                <a href="" class="tabMenu__panel--item">시대극</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="tabMenu__item">
+                        <button type="button" class="tabMenu__header">국가</button>
+                        <ul class="tabMenu__panel">
+                            <li>
+                                <a href="#" class="tabMenu__panel--item">독일</a>
+                            </li>
+                            <li>
+                                <a href="#" class="tabMenu__panel--item">캐나다</a>
+                            </li>
+                            <li>
+                                <a href="#" class="tabMenu__panel--item">이탈리아</a>
+                            </li>
+                            <li>
+                                <a href="#" class="tabMenu__panel--item">스페인</a>
+                            </li>
+                            <li>
+                                <a href="#" class="tabMenu__panel--item">대만</a>
+                            </li>
+                            <li>
+                                <a href="#" class="tabMenu__panel--item">영국</a>
+                            </li>
+                            <li>
+                                <a href="#" class="tabMenu__panel--item">프랑스</a>
+                            </li>
+                            <li>
+                                <a href="#" class="tabMenu__panel--item">인도</a>
+                            </li>
+                            <li>
+                                <a href="#" class="tabMenu__panel--item">홍콩</a>
+                            </li>
+                            <li>
+                                <a href="#" class="tabMenu__panel--item">중국</a>
+                            </li>
+                            <li>
+                                <a href="#" class="tabMenu__panel--item">미국</a>
+                            </li>
+                            <li>
+                                <a href="#" class="tabMenu__panel--item">일본</a>
+                            </li>
+                            <li>
+                                <a href="#" class="tabMenu__panel--item">한국</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="tabMenu__item">
+                        <button type="button" class="tabMenu__header">특징</button>
+                        <ul class="tabMenu__panel">
+                            <li>
+                                <a href="#" class="tabMenu__panel--item">재능</a>
+                            </li>
+                            <li>
+                                <a href="#" class="tabMenu__panel--item">완성도</a>
+                            </li>
+                            <li>
+                                <a href="#" class="tabMenu__panel--item">워킹타이틀</a>
+                            </li>
+                            <li>
+                                <a href="#" class="tabMenu__panel--item">단편기반</a>
+                            </li>
+                            <li>
+                                <a href="#" class="tabMenu__panel--item">마약</a>
+                            </li>
+                            <li>
+                                <a href="#" class="tabMenu__panel--item">악역</a>
+                            </li>
+                            <li>
+                                <a href="#" class="tabMenu__panel--item">치열한</a>
+                            </li>
+                            <li>
+                                <a href="#" class="tabMenu__panel--item">오디션</a>
+                            </li>
+                            <li>
+                                <a href="#" class="tabMenu__panel--item">퍼포먼스</a>
+                            </li>
+                            <li>
+                                <a href="#" class="tabMenu__panel--item">뉴욕배경</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
             </li>
             <li class="header__navigation--item">
                 <a href="#" class="header__navigation--link">평가하기</a>
@@ -49,8 +172,25 @@
             <fieldset>
                 <legend class="a11y-hidden">검색 영역</legend>
                 <button type="button" class="header__searchForm--search">검색</button>
-                <label for="searchInput" class="ally-hidden">검색</label>
+                <label for="searchInput" class="a11y-hidden">검색</label>
                 <input type="search" id="searchInput"/>
+                <div class="header__searchForm__trending">
+                    <h3 class="header__searchForm__trending--Title">인기 검색어</h3>
+                    <ul class="header__searchForm__trending--list">
+                        <li class="header__searchForm__trending--item">
+                            <a href="#" class="header__searchForm__trending--link">소리도 없이</a>
+                        </li>
+                        <li class="header__searchForm__trending--item">
+                            <a href="#" class="header__searchForm__trending--link">해리포터와 마법사의 돌</a>
+                        </li>
+                        <li class="header__searchForm__trending--item">
+                            <a href="#" class="header__searchForm__trending--link">와이 우먼 킬</a>
+                        </li>
+                        <li class="header__searchForm__trending--item">
+                            <a href="#" class="header__searchForm__trending--link">와이 우먼 킬2</a>
+                        </li>
+                    </ul>
+                </div>
             </fieldset>
         </form>
     </div>
@@ -81,7 +221,7 @@
 </main>
 <aside class="controller">
     <a href="#" target="_blank" rel="noopener noreferrer" class="controller__random">
-        <img src="./images/btn-random.svg" alt="갓챠 랜덤플레이">
+        <img src="./src/images/common/img_gotcha_random.svg" alt="갓챠 랜덤플레이">
     </a>
     <a href="#" class="controller__topButton">페이지 TOP으로</a>
 </aside>
@@ -120,7 +260,8 @@
             </div>
             <div class="footer__address--content--item">
                 <dt>B2B 이용권 구매 문의</dt>
-                <dd>쿠프마케팅(<a href="mailto:m_oper@coopnc.com">m_oper@coopnc.com</a> / <a href="tel:070-4020-5289">070-4020-5289</a>)</dd>
+                <dd>쿠프마케팅(<a href="mailto:m_oper@coopnc.com">m_oper@coopnc.com</a> / <a href="tel:070-4020-5289">070-4020-5289</a>)
+                </dd>
             </div>
         </dl>
         <div class="footer__address--info">
@@ -132,14 +273,18 @@
         </div>
     </address>
     <ul class="footer__sns">
-        <li><a href="https://www.facebook.com/watchaKR" target="_blank" rel="noopener noreferrer" class="footer__sns--item facebook">페이스북</a></li>
-        <li><a href="https://twitter.com/watcha_kr" target="_blank" rel="noopener noreferrer" class="footer__sns--item twitter">트위터</a></li>
-        <li><a href="https://www.instagram.com/watcha_kr/" target="_blank" rel="noopener noreferrer" class="footer__sns--item instagram">인스타그램</a></li>
-        <li><a href="https://watcha.team/" target="_blank" rel="noopener noreferrer" class="footer__sns--item blog">블로그</a></li>
+        <li><a href="https://www.facebook.com/watchaKR" target="_blank" rel="noopener noreferrer"
+               class="footer__sns--item facebook">페이스북</a></li>
+        <li><a href="https://twitter.com/watcha_kr" target="_blank" rel="noopener noreferrer"
+               class="footer__sns--item twitter">트위터</a></li>
+        <li><a href="https://www.instagram.com/watcha_kr/" target="_blank" rel="noopener noreferrer"
+               class="footer__sns--item instagram">인스타그램</a></li>
+        <li><a href="https://watcha.team/" target="_blank" rel="noopener noreferrer"
+               class="footer__sns--item blog">블로그</a></li>
     </ul>
     <div class="footer__rights">
         <a href="/" class="footer__right--logo">
-            <img src="./images/footer-logo.svg" alt="GOTCHA">
+            <img src="./src/images/common/logo_footer.svg" alt="GOTCHA">
         </a>
         <small class="footer__rights--copyright">Copyright &copy; 2021 by Gotcha, Inc. All rights reserved.</small>
     </div>
