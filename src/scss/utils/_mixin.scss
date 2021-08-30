@@ -31,11 +31,14 @@
 }
 
 // 텍스트 ellipsis multiline ----------------------------------------------------------- /
-@mixin ellipsisMulti($line) {
+@mixin ellipsisMulti($line, $lineheight: 1.5) {
     text-overflow: ellipsis;
-    white-space: nowrap;
     overflow: hidden;
-    //line-height: $line
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $line;
+    line-height: $lineheight * 1em;
+    max-height: $lineheight * $line * 1em;
 }
 
 // 반응형 iframe ----------------------------------------------------------- /
