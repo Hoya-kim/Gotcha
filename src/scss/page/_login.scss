@@ -1,3 +1,7 @@
 @use './../base' as *;
 @use './../utils' as *;
 @use './../layout' as *;
+
+.tesst{
+    @include ellipsisMulti(2, 1.8);
+}
