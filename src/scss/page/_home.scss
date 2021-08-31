@@ -8,18 +8,34 @@ h3 {
     margin: 0;
 }
 
+.hide {
+    display: none;
+}
+
 .container {
-    padding: 0 rem(40px);
+    // 임시
+    @include mobile {
+        padding: rem(10px) 0 rem(10px) rem(10px);
+    }
+    @include desktop{
+        padding: rem(10px) 0 rem(10px) rem(20px);
+    }
 }
 // 메인
 .visual {
     position: relative;
-    margin-left: rem(-40px);
+    @include mobile {
+        margin-left: rem(-20px);
+    }
+
+    @include desktop {
+        margin-left: rem(-26px);
+    }
     
     &__mainImg {
         display: block;
         // width: 100%;
-        width: 100vw;
+        width: 99vw;
     }
 
     &__gradient {
@@ -27,22 +43,32 @@ h3 {
         position: absolute;
         left:0;
         top:0;
-        z-index: 200;
-        background-image: linear-gradient( 90deg, rgba(20,21,23,0.7) 0%, rgba(20,21,23,0.45) 38%, rgba(20,21,23,0.15) 69%, rgba(20,21,23,0) 100% );
+        z-index: 1;
+        background: linear-gradient( 90deg, rgba(11,12,13,0.9) 0%, rgba(20,21,23,0.45) 38%, rgba(20,21,23,0.15) 69%, rgba(20,21,23,0) 100% );
         height:100%;
+
+        &::before {
+            background: linear-gradient( 0deg, rgba(32, 35, 39, 1) 0%, rgba(20, 21, 23, 0.767) 38%, rgba(20,21,23,0.15) 69%, rgba(20,21,23,0) 100% );
+            content:'';
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
     }
     // 타이틀
     &__title {
         font-weight: 400;
+        line-height: 1.5;
         @include mobile {
+            margin-left: rem(20px);
             font-size: rem(12px);
             position: absolute;
             bottom: 2%;
-            left: 2%;
             width: 40%;
         }
         @include desktop {
-            margin-left: 5%;
+            font-size: 1.45vw;
+            margin-left: rem(28px);
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
@@ -55,8 +81,6 @@ h3 {
         }
     }
 
-    
-
     // 버튼 그룹
     &__btnGroup {
         display: flex;
@@ -68,14 +92,17 @@ h3 {
             display: none;
         }
         @include desktop {
-            [class^="visual__btnGroup"] {
+            &--view, &--detail {
                 display: block;
                 background: rgba(255, 255, 255, 0.04);
-                padding: rem(10px);
+                padding: rem(10px) rem(20px);
                 backdrop-filter: blur(5px);
+                border-radius: rem(5px);
             }
             &--view {
                 margin-right: rem(10px);
+                background-color: rgba(255, 255, 255, 0.932);
+                color: black;
             }
         }
     }
@@ -85,10 +112,31 @@ h3 {
 .movieList {
     &__box {
         position: relative;
+        padding: rem(20px) 0;
     }
+    @include desktop {
+        margin-top: rem(-60px);
+        &__box.inVisual {
+            position: relative;
+            top: rem(-10px);
+            z-index: 50;
+        }
+    }
+
+    // 첫번째 더보기 안보이게
+    // &__box:first-child {
+    //     .movieList__more {
+    //         display: none;
+    //     }
+    // }
+
     &__title {
+        font-size: 1.45vw;
         display: inline-block;
         padding: rem(10px) rem(5px);
+        @include mobile {
+            font-size: rem(14px);
+        }
     }
     &__wrap {
         display: flex;
@@ -96,21 +144,111 @@ h3 {
         margin-bottom: rem(20px);
         overflow: hidden;
         padding: rem(4px);
+
+        &--desc {
+            margin-top: rem(10px);
+            @include mobile {
+                font-size: rem(12px);
+            }
+        }
     }
 
     &__item {
         margin-right: rem(10px);
+        position: relative;
 
         &--thumbnail {
             border-radius: rem(5px);
         }
-    }
+        @include mobile {
+            // 2번째 이후로 안보이게
+            &:nth-child(n+3) {
+                display: none;
+            } 
+            &:first-child, &:nth-child(2) {
+                width: 50%;
+            }
+            &--thumbnail {
+                width: 100%;
+            }
+        }
+        @include desktop {
+            width: 20%;
 
+            &--thumbnail {
+                width: 100%;
+            }
+        }
+    }
     &__more {
-        font-size: rem(12px);
+        font-size: 1.2vw;
         position: absolute;
-        top: rem(8px);
-        right: 0;
+        top: rem(24px);
+        right: rem(8px);
         padding: rem(8px);
     }
+    // visual까지 메뉴들 끌어올리기
+    // @include desktop {
+    //     top: rem(-100px);
+    //     position: relative;
+    //     z-index:9999;
+    // }
 }
+
+// :hover
+.movieList__detail {
+    display: none;
+}
+.movieList__item:hover {
+    .movieList__detail {
+        display: block;
+        // background: rgba(255, 255, 255, 0.04);
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: rem(18px);
+        border-radius: rem(5px);
+        font-size: rem(12px);
+        
+        &--run, &--desc {
+            background: rgba(255, 255, 255, 0.04);
+            backdrop-filter: blur(5px);
+            padding: rem(5px) rem(10px);
+        }
+        &--run {
+            position: absolute;
+            left:0;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(20,21,23,0.15);
+        }
+
+        &--desc {
+            position: absolute;
+            right:0;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(20,21,23,0.15);
+        }
+    }
+}
+
+.highlight {
+    background-color: $lightblack;
+    padding-left: rem(20px);
+    margin-left: rem(-20px);
+    padding: rem(20px) 0 rem(20px) rem(20px);
+    
+    position: relative;
+
+    .movieList__item {
+        @include desktop {
+            width: 25%;
+        }
+        @include mobile {
+            width: 50%;
+        }
+    }
+}
+

@@ -23,7 +23,7 @@
   "scripts": {
     "start": "run-p watch serve",
     "build": "webpack build",
-    "sass": "sass sass:css",
+    "sass": "sass ./src/scss:css",
     "watch": "npm run sass -- --watch",
     "serve": "live-server --port=3000",
     "clear": "rimraf -rf build dist"
