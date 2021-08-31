@@ -6,7 +6,7 @@
           content="width=device-width, user-scalable=yes, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>갓챠</title>
-    <link rel="stylesheet" href="./dist/css/style.css">
+    <link rel="stylesheet" href="./src/css/index.css">
 </head>
 <body>
 <div class="skipNavigation">
@@ -14,7 +14,7 @@
     <a href="#wanted">보고싶어요 바로가기</a>
     <a href="#trending">인기작 바로가기</a>
 </div>
-<div class="topBanner">
+<div class="topBanner is-active">
     <p class="topBanner__desc">왓챠가 그립지 않으세요? 다시 돌아오셔서 모든 영화, 드라마 무제한으로 감상하세요.</p>
     <div class="topBanner__btnGroup">
         <button class="topBanner__btnGroup--button btn-primary">이용권 구매</button>
@@ -23,137 +23,135 @@
     <button class="topBanner--closeButton" aria-label="배너 닫기"></button>
 </div>
 <header class="header">
-    <h1>
-        <a href="/" class="header__logo">
+    <h1 class="header__logo">
+        <a href="/" class="header__logo--link">
             <img src="./src/images/common/logo_top.svg" alt="GOTCHA">
         </a>
     </h1>
     <nav>
         <h2 class="a11y-hidden">메인 메뉴</h2>
+        <button type="button" class="header--openButton">메뉴 열기</button>
         <ul class="header__navigation">
-            <li class="header__navigation--item">
-                <a href="/" class="header__navigation--link">홈</a>
-            </li>
-            <li class="header__navigation--item">
-                <button class="header__navigation--button">탐색하기</button>
-                <ul class="tabMenu">
-                    <li class="tabMenu__item">
-                        <button type="button" class="tabMenu__header">장르</button>
+            <li class="header__navigation--item tabMenu">
+                <a href="#" tabindex="0" class="header__navigation--link tab-open">탐색하기</a>
+                <ul class="tabMenu__container">
+                    <li class="tabMenu__item is-active">
+                        <button type="button" class="tabMenu__header tabMenu__header--genre">장르</button>
                         <ul class="tabMenu__panel">
-                            <li>
-                                <a href="#" class="tabMenu__panel--item item-new">새로 올라온 작품</a>
+                            <li class="tabMenu__panel--item">
+                                <a href="#" class="tabMenu__panel--link item-new">새로 올라온 작품</a>
                             </li>
-                            <li>
-                                <a href="" class="tabMenu__panel--item">새로운 에피소드</a>
+                            <li class="tabMenu__panel--item">
+                                <a href="" class="tabMenu__panel--link">새로운 에피소드</a>
                             </li>
-                            <li>
-                                <a href="" class="tabMenu__panel--item">공개 예정인 작품</a>
+                            <li class="tabMenu__panel--item">
+                                <a href="" class="tabMenu__panel--link">공개 예정인 작품</a>
                             </li>
-                            <li>
-                                <a href="" class="tabMenu__panel--item">왓챠 익스클루시브</a>
+                            <li class="tabMenu__panel--item">
+                                <a href="" class="tabMenu__panel--link">왓챠 익스클루시브</a>
                             </li>
-                            <li>
-                                <a href="" class="tabMenu__panel--item">영어 자막 지원 작품</a>
+                            <li class="tabMenu__panel--item">
+                                <a href="" class="tabMenu__panel--link">영어 자막 지원 작품</a>
                             </li>
-                            <li>
-                                <a href="" class="tabMenu__panel--item">TV 드라마</a>
+                            <li class="tabMenu__panel--item">
+                                <a href="" class="tabMenu__panel--link">TV 드라마</a>
                             </li>
-                            <li>
-                                <a href="" class="tabMenu__panel--item">TV 애니메이션</a>
+                            <li class="tabMenu__panel--item">
+                                <a href="" class="tabMenu__panel--link">TV 애니메이션</a>
                             </li>
-                            <li>
-                                <a href="" class="tabMenu__panel--item">재난</a>
+                            <li class="tabMenu__panel--item">
+                                <a href="" class="tabMenu__panel--link">재난</a>
                             </li>
-                            <li>
-                                <a href="" class="tabMenu__panel--item">로맨틱코디미</a>
+                            <li class="tabMenu__panel--item">
+                                <a href="" class="tabMenu__panel--link">로맨틱코디미</a>
                             </li>
-                            <li>
-                                <a href="" class="tabMenu__panel--item">시트콤</a>
+                            <li class="tabMenu__panel--item">
+                                <a href="" class="tabMenu__panel--link">시트콤</a>
                             </li>
-                            <li>
-                                <a href="" class="tabMenu__panel--item">SF</a>
+                            <li class="tabMenu__panel--item">
+                                <a href="" class="tabMenu__panel--link">SF</a>
                             </li>
-                            <li>
-                                <a href="" class="tabMenu__panel--item">시대극</a>
+                            <li class="tabMenu__panel--item">
+                                <a href="" class="tabMenu__panel--link">시대극</a>
                             </li>
                         </ul>
                     </li>
                     <li class="tabMenu__item">
-                        <button type="button" class="tabMenu__header">국가</button>
+                        <button type="button" class="tabMenu__header tabMenu__header--country">국가</button>
                         <ul class="tabMenu__panel">
-                            <li>
-                                <a href="#" class="tabMenu__panel--item">독일</a>
+                            <li class="tabMenu__panel--item">
+                                <a href="#" class="tabMenu__panel--link">독일</a>
                             </li>
-                            <li>
-                                <a href="#" class="tabMenu__panel--item">캐나다</a>
+                            <li class="tabMenu__panel--item">
+                                <a href="#" class="tabMenu__panel--link">캐나다</a>
                             </li>
-                            <li>
-                                <a href="#" class="tabMenu__panel--item">이탈리아</a>
+                            <li class="tabMenu__panel--item">
+                                <a href="#" class="tabMenu__panel--link">이탈리아</a>
                             </li>
-                            <li>
-                                <a href="#" class="tabMenu__panel--item">스페인</a>
+                            <li class="tabMenu__panel--item">
+                                <a href="#" class="tabMenu__panel--link">스페인</a>
                             </li>
-                            <li>
-                                <a href="#" class="tabMenu__panel--item">대만</a>
+                            <li class="tabMenu__panel--item">
+                                <a href="#" class="tabMenu__panel--link">대만</a>
                             </li>
-                            <li>
-                                <a href="#" class="tabMenu__panel--item">영국</a>
+                            <li class="tabMenu__panel--item">
+                                <a href="#" class="tabMenu__panel--link">영국</a>
                             </li>
-                            <li>
-                                <a href="#" class="tabMenu__panel--item">프랑스</a>
+                            <li class="tabMenu__panel--item">
+                                <a href="#" class="tabMenu__panel--link">프랑스</a>
                             </li>
-                            <li>
-                                <a href="#" class="tabMenu__panel--item">인도</a>
+                            <li class="tabMenu__panel--item">
+                                <a href="#" class="tabMenu__panel--link">인도</a>
                             </li>
-                            <li>
-                                <a href="#" class="tabMenu__panel--item">홍콩</a>
+                            <li class="tabMenu__panel--item">
+                                <a href="#" class="tabMenu__panel--link">홍콩</a>
                             </li>
-                            <li>
-                                <a href="#" class="tabMenu__panel--item">중국</a>
+                            <li class="tabMenu__panel--item">
+                                <a href="#" class="tabMenu__panel--link">중국</a>
                             </li>
-                            <li>
-                                <a href="#" class="tabMenu__panel--item">미국</a>
+                            <li class="tabMenu__panel--item">
+                                <a href="#" class="tabMenu__panel--link">미국</a>
                             </li>
-                            <li>
-                                <a href="#" class="tabMenu__panel--item">일본</a>
+                            <li class="tabMenu__panel--item">
+                                <a href="#" class="tabMenu__panel--link">일본</a>
                             </li>
-                            <li>
-                                <a href="#" class="tabMenu__panel--item">한국</a>
+                            <li class="tabMenu__panel--item">
+                                <a href="#" class="tabMenu__panel--link">한국</a>
                             </li>
                         </ul>
                     </li>
                     <li class="tabMenu__item">
-                        <button type="button" class="tabMenu__header">특징</button>
+                        <button type="button" class="tabMenu__header tabMenu__header--point">특징</button>
                         <ul class="tabMenu__panel">
-                            <li>
-                                <a href="#" class="tabMenu__panel--item">재능</a>
+                            <li class="tabMenu__panel--item">
+                                <a href="#" class="tabMenu__panel--link">재능</a>
                             </li>
-                            <li>
-                                <a href="#" class="tabMenu__panel--item">완성도</a>
+                            <li class="tabMenu__panel--item">
+                                <a href="#" class="tabMenu__panel--link">완성도</a>
                             </li>
-                            <li>
-                                <a href="#" class="tabMenu__panel--item">워킹타이틀</a>
+                            <li class="tabMenu__panel--item">
+                                <a href="#" class="tabMenu__panel--link">워킹타이틀</a>
                             </li>
-                            <li>
-                                <a href="#" class="tabMenu__panel--item">단편기반</a>
+                            <li class="tabMenu__panel--item">
+                                <a href="#" class="tabMenu__panel--link">단편기반</a>
                             </li>
-                            <li>
-                                <a href="#" class="tabMenu__panel--item">마약</a>
+                            <li class="tabMenu__panel--item">
+                                <a href="#" class="tabMenu__panel--link">마약</a>
                             </li>
-                            <li>
-                                <a href="#" class="tabMenu__panel--item">악역</a>
+                            <li class="tabMenu__panel--item">
+                                <a href="#" class="tabMenu__panel--link">악역</a>
                             </li>
-                            <li>
-                                <a href="#" class="tabMenu__panel--item">치열한</a>
+                            <li class="tabMenu__panel--item">
+                                <a href="#" class="tabMenu__panel--link">치열한</a>
                             </li>
-                            <li>
-                                <a href="#" class="tabMenu__panel--item">오디션</a>
+                            <li class="tabMenu__panel--item">
+                                <a href="#" class="tabMenu__panel--link">오디션</a>
                             </li>
-                            <li>
-                                <a href="#" class="tabMenu__panel--item">퍼포먼스</a>
+                            <li class="tabMenu__panel--item">
+                                <a href="#" class="tabMenu__panel--link">퍼포먼스</a>
                             </li>
-                            <li>
-                                <a href="#" class="tabMenu__panel--item">뉴욕배경</a>
+                            <li class="tabMenu__panel--item">
+                                <a href="#" class="tabMenu__panel--link">뉴욕배경</a>
                             </li>
                         </ul>
                     </li>
@@ -169,38 +167,42 @@
     </nav>
     <div class="header__searchForm">
         <h2 class="a11y-hidden">검색 영역</h2>
+        <button type="button" class="header__searchForm--button">검색</button>
         <form>
             <fieldset>
                 <legend class="a11y-hidden">검색 영역</legend>
-                <button type="button" class="header__searchForm--search">검색</button>
                 <label for="searchInput" class="a11y-hidden">검색</label>
-                <input type="search" id="searchInput"/>
-                <div class="header__searchForm__trending">
-                    <h3 class="header__searchForm__trending--Title">인기 검색어</h3>
-                    <ul class="header__searchForm__trending--list">
-                        <li class="header__searchForm__trending--item">
-                            <a href="#" class="header__searchForm__trending--link">소리도 없이</a>
-                        </li>
-                        <li class="header__searchForm__trending--item">
-                            <a href="#" class="header__searchForm__trending--link">해리포터와 마법사의 돌</a>
-                        </li>
-                        <li class="header__searchForm__trending--item">
-                            <a href="#" class="header__searchForm__trending--link">와이 우먼 킬</a>
-                        </li>
-                        <li class="header__searchForm__trending--item">
-                            <a href="#" class="header__searchForm__trending--link">와이 우먼 킬2</a>
-                        </li>
-                    </ul>
-                </div>
+                <span class="header__searchForm--input">
+                    <input type="search" id="searchInput" placeholder="제목, 감독, 배우로 검색">
+                </span>
             </fieldset>
         </form>
+        <div class="header__trending">
+            <h3 class="header__trending--Title">인기 검색어</h3>
+            <ul class="header__trending--list">
+                <li class="header__trending--item">
+                    <a href="#" class="header__trending--link">소리도 없이</a>
+                </li>
+                <li class="header__trending--item">
+                    <a href="#" class="header__trending--link">해리포터와 마법사의 돌</a>
+                </li>
+                <li class="header__trending--item">
+                    <a href="#" class="header__trending--link">와이 우먼 킬</a>
+                </li>
+                <li class="header__=trending--item">
+                    <a href="#" class="header__trending--link">와이 우먼 킬2</a>
+                </li>
+            </ul>
+        </div>
     </div>
     <div class="header__userConfig">
-        <button class="header__userConfig--open">쓰리박</button>
+        <button class="header__userConfig--user">쓰리박</button>
         <div class="header__userConfig--list">
             <ul class="header__userConfig--profile">
-                <li><a href="#"><i class="icon"></i>키즈</a></li>
-                <li><a href="#"><i class="icon icon-add"></i>프로필 추가</a></li>
+                <li><a href="#" class="profile-icon"><i class="icon-kids"></i>키즈</a></li>
+                <li><a href="#" class="profile-icon"><i class="icon-custom"></i>박쓰</a></li>
+            </ul>
+            <ul class="header__userConfig--edit">
                 <li><a href="#">프로필 편집</a></li>
             </ul>
             <ul class="header__userConfig--watched">
@@ -218,48 +220,49 @@
     </div>
 </header>
 <main class="main">
-    메인 콘텐츠 영역입니다.
+    <br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </main>
 <aside class="controller">
     <a href="#" target="_blank" rel="noopener noreferrer" class="controller__random">
         <img src="./src/images/common/img_gotcha_random.svg" alt="갓챠 랜덤플레이">
     </a>
-    <a href="#" class="controller__topButton">페이지 TOP으로</a>`
+    <a href="#" class="controller__topButton">페이지 TOP으로</a>
 </aside>
 <footer class="footer">
     <ul class="footer__service">
-        <li>
-            <button type="button" class="footer__service--item">갓챠피디아 서비스 이용약관</button>
+        <li class="footer__service--item">
+            <button type="button">갓챠피디아 서비스 이용약관</button>
         </li>
-        <li>
-            <button type="button" class="footer__service--item"><strong>개인정보 처리 방침</strong></button>
+        <li class="footer__service--item">
+            <button type="button"><strong>개인정보 처리 방침</strong></button>
         </li>
-        <li>
-            <button type="button" class="footer__service--item">왓챠 서비스 이용약관</button>
+        <li class="footer__service--item">
+            <button type="button">왓챠 서비스 이용약관</button>
         </li>
-        <li>
-            <a href="#" class="footer__service--item">고객센터</a>
+        <li class="footer__service--item">
+            <a href="#">고객센터</a>
         </li>
-        <li>
-            <a href="#" class="footer__service--item">채용정보</a>
+        <li class="footer__service--item">
+            <a href="#">채용정보</a>
         </li>
     </ul>
     <address class="footer__address">
-        <dl class="footer__address--content">
-            <div class="footer__address--content--item">
+        <dl class="footer__address__content">
+            <div class="footer__address__content--item">
                 <dt>고객센터(이용 및 결제 문의)</dt>
                 <dd>
                     <a href="mailto:cs@watcha.co.kr">cs@watcha.co.kr</a> /
                     <a href="tel:02-515-9985">02-515-9985(유료)</a>
                 </dd>
             </div>
-            <div class="footer__address--content--item">
+            <div class="footer__address__content--item">
                 <dt>제휴 및 대회 협력</dt>
                 <dd>
                     <a href="https://watcha.team/contact" target="_blank" rel="noopener noreferrer">https://watcha.team/contact</a>
                 </dd>
             </div>
-            <div class="footer__address--content--item">
+            <div class="footer__address__content--item">
                 <dt>B2B 이용권 구매 문의</dt>
                 <dd>쿠프마케팅(<a href="mailto:m_oper@coopnc.com">m_oper@coopnc.com</a> / <a href="tel:070-4020-5289">070-4020-5289</a>)
                 </dd>
@@ -284,12 +287,14 @@
                class="footer__sns--item blog">블로그</a></li>
     </ul>
     <div class="footer__rights">
-        <a href="/" class="footer__right--logo">
+        <a href="/" class="footer__rights--logo">
             <img src="./src/images/common/logo_footer.svg" alt="GOTCHA">
         </a>
         <small class="footer__rights--copyright">Copyright &copy; 2021 by Gotcha, Inc. All rights reserved.</small>
     </div>
 </footer>
+
+<script src="src/js/common.js"></script>
 </body>
 </html>
 

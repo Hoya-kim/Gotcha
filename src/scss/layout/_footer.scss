@@ -1,2 +1,163 @@
 @use './../base' as *;
 @use './../utils' as *;
+
+.footer {
+    position: relative;
+    background: $black;
+    font-size: 13px;
+
+    @include desktop {
+        padding: rem(27px) rem(30px) rem(40px);
+    }
+
+    // 약관 및 정보
+    &__service {
+        display: flex;
+        align-items: center;
+        margin-bottom: rem(30px);
+
+        &--item {
+            a {
+                padding: rem(5px) 0;
+            }
+
+            button {
+                padding: rem(5px) 0;
+                border: 0;
+                background: none;
+            }
+
+            strong {
+                font-weight: 500;
+            }
+        }
+
+        &--item + &--item {
+            position: relative;
+            margin-left: rem(6px);
+            padding-left: rem(6px);
+
+            &:before {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 0;
+                transform: translateY(-50%);
+                width: 1px;
+                height: 10px;
+                margin-top: 1px;
+                background: #ddd;
+            }
+        }
+    }
+
+    // 주소
+    &__address {
+
+        &__content{
+            margin-bottom: rem(52px);
+            &--item {
+                display: flex;
+
+                dt {
+                    position: relative;
+                    width: rem(160px);
+                    margin-right: rem(6px);
+
+                    &:after {
+                        content: '';
+                        position: absolute;
+                        top: 50%;
+                        right: 0;
+                        transform: translateY(-50%);
+                        width: 1px;
+                        height: 10px;
+                        background: #ddd;
+                    }
+                }
+
+                dd {
+                    margin-left: 0;
+                }
+            }
+        }
+
+
+        &__content--item + &__content--item {
+            margin-top: rem(6px);
+        }
+
+        &--info {
+            max-width: rem(540px);
+            line-height: 1.5;
+            color: #999;
+
+            span {
+                position: relative;
+                display: inline-block;
+                padding-right: rem(8px);
+                margin-right: rem(4px);
+                &:nth-child(3):after,
+                &:nth-child(5):after{
+                    display: none;
+                }
+                &:after{
+                    content: '';
+                    position: absolute;
+                    top: 50%;
+                    right: 0;
+                    transform: translateY(-50%);
+                    width: 1px;
+                    height: 10px;
+                    background: #ddd;
+                }
+            }
+        }
+    }
+
+    // copyright
+    &__rights{
+        display: flex;
+        align-items: center;
+        color: #999;
+
+        &--logo{
+            display: block;
+            width: rem(58px);
+            margin-right: rem(6px);
+        }
+
+        &--copyright{
+            color: inherit;
+        }
+    }
+
+    // SNS
+    &__sns{
+        position: absolute;
+        right: rem(30px);
+        bottom: rem(40px);
+        display: flex;
+
+        &--item{
+            display: block;
+            width: rem(36px);
+            height: rem(36px);
+            margin: 0 rem(10px);
+            border: 1px solid $white;
+            border-radius: 50%;
+            text-indent: -9999px;
+            background-image: url("../images/common/icon-sns.png");
+
+            &.twitter{
+                background-position: rem(-36px) 50%;
+            }
+            &.instagram{
+                background-position: rem(-72px) 50%;
+            }
+            &.blog{
+                background-position: right 50%;
+            }
+        }
+    }
+}
