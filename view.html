@@ -7,13 +7,15 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>갓챠</title>
   <link rel="stylesheet" href="/css/index.css">
+  <script src="src/js/component/header.js" type="text/javascript" defer></script>
+  <script src="src/js/component/footer.js" type="text/javascript" defer></script>
+  <!-- temp -->
+  <script src="src/js/common.js" type="text/javascript" defer></script>
 </head>
 
 <body>
-  <div class="topBanner"></div>
-  <header class="header"></header>
+  <header-component></header-component>
   <main class="main">
-
     <div class="viewContainer">
       <h2 class="a11y-hidden">먹리스트</h2>
       <!-- 탭 리스트 -->
@@ -28,8 +30,8 @@
               id="tab-detail" data-tab="contentDetail">상세정보</button>
           </li>
           <li class="viewTab__list--item btn-right">
-            <button class="viewTab-btnMove" role="tab" tabindex="-1" aria-selected="false" aria-controls="similarContent"
-              id="tab-similar" data-tab="similarContent">비슷한 작품</button>
+            <button class="viewTab-btnMove" role="tab" tabindex="-1" aria-selected="false"
+              aria-controls="similarContent" id="tab-similar" data-tab="similarContent">비슷한 작품</button>
           </li>
         </ul>
         <div class="viewTab__tabPanel current">
@@ -102,23 +104,23 @@
             aria-labelledby="tab-detail">
             <div class="content-detail__left">
               <dl class="briefInfo">
-                  <dt class="briefInfo__general">감독 : </dt>
-                  <dd class="briefInfo__director">
-                    <a href="#">박태준</a>
-                  </dd>
-              
-                  <dt class="briefInfo__general">출연: </dt>
-                  <dd class="briefInfo__cast">
-                    <a href="#">김정호 </a>
-                    <a href="#">박바름 </a>
-                    <a href="#">박지영 </a>
-                    <a href="#">박태준 </a>
-                    <a href="#">육회초밥 </a>
-                    <a href="#">빵 </a>
-                    <a href="#">아이스크림 케이크 </a>
-                    <a href="#">팝콘 </a>
-                    <a href="#">견과류 </a>
-                  </dd>
+                <dt class="briefInfo__general">감독 : </dt>
+                <dd class="briefInfo__director">
+                  <a href="#">박태준</a>
+                </dd>
+
+                <dt class="briefInfo__general">출연: </dt>
+                <dd class="briefInfo__cast">
+                  <a href="#">김정호 </a>
+                  <a href="#">박바름 </a>
+                  <a href="#">박지영 </a>
+                  <a href="#">박태준 </a>
+                  <a href="#">육회초밥 </a>
+                  <a href="#">빵 </a>
+                  <a href="#">아이스크림 케이크 </a>
+                  <a href="#">팝콘 </a>
+                  <a href="#">견과류 </a>
+                </dd>
               </dl>
             </div>
             <div class="content-detail__right">
@@ -139,8 +141,10 @@
                   <p class="comment__opinion">이 영화를 보고 육회가 두려워졌다.</p>
                   <button class="comment__like">65</button>
                   <p class="comment__id">패캠</p>
-                  <p class="comment__opinion">그저 경이롭다. 이렇게 직접 현장에 있듯 100% 실감나는 영화가 있었나싶고, 엄청난 퀘스트를 이루어야하는 상황에서 음식을 포기하지않는 그
-                    열정을 너무도 잘 그려냈다. 영화의 발전이 정말 눈부시다 느꼈다. 배경도 음식도 마지막 씬까지 그저 정말 경이로울 뿐이다. 영화를 사랑할 수 밖에 없게 만드는 영화는 이런 영화겠지.</p>
+                  <p class="comment__opinion">그저 경이롭다. 이렇게 직접 현장에 있듯 100% 실감나는 영화가 있었나싶고, 엄청난 퀘스트를 이루어야하는 상황에서 음식을
+                    포기하지않는 그
+                    열정을 너무도 잘 그려냈다. 영화의 발전이 정말 눈부시다 느꼈다. 배경도 음식도 마지막 씬까지 그저 정말 경이로울 뿐이다. 영화를 사랑할 수 밖에 없게 만드는 영화는 이런
+                    영화겠지.</p>
                   <button class="comment__like">232</button>
                 </div>
                 <div class="comment__secondGroup">
@@ -224,8 +228,8 @@
                   <figure class="movieList__item--wrap">
                     <picture>
                       <source srcset="http://placehold.it/200x100" type="image/webp">
-                      <img class="movieList__item--thumbnail" src="http://placehold.it/200x10http://placehold.it/200x10s0"
-                        alt="아르마딜로">
+                      <img class="movieList__item--thumbnail"
+                        src="http://placehold.it/200x10http://placehold.it/200x10s0" alt="아르마딜로">
                     </picture>
                     <figcaption class="movieList__wrap--desc">
                       <p class="movieList__item--title">아르마딜로</p>
@@ -245,8 +249,7 @@
       </div>
     </div>
   </main>
-  <aside class="controller"></aside>
-  <footer class="footer"></footer>
+  <footer-component></footer-component>
   <script src="./src/js/view.js"></script>
 </body>
 
