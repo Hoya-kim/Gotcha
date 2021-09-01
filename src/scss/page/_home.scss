@@ -14,27 +14,53 @@ h3 {
 
 .container {
     @include mobile {
-        padding: rem(10px) 0 rem(10px) rem(10px);
+        padding: rem(10px) 0 rem(10px) 0;
+        margin-bottom: rem(40px);
+        margin-top: rem(-64px);
     }
     @include desktop{
-        padding: rem(10px) 0 rem(10px) rem(20px);
+        // padding: rem(10px) 0 rem(10px) rem(20px);
+        margin-bottom: rem(50px);
+        margin-top: rem(-72px);
     }
 }
 // 메인
 .visual {
     position: relative;
+    overflow: hidden;
     @include mobile {
-        margin-left: rem(-20px);
+        // margin-left: rem(-20px);
     }
 
     @include desktop {
-        margin-left: rem(-26px);
+        // margin-left: rem(-26px);
     }
     
+    &__imgWrap {
+        animation: 10s ease moveX forwards 3s;
+        @keyframes moveX {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(40px);
+            }
+        }
+    }
     &__mainImg {
         display: block;
         // width: 100%;
-        width: 99vw;
+        width: 100%;
+        animation: 3s ease-in-out scale2X forwards;
+
+        @keyframes scale2X {
+            0% {
+                transform: scale(1);
+            }
+            100% {
+                transform: scale(1.2);
+            }
+        }
     }
 
     &__gradient {
@@ -60,7 +86,7 @@ h3 {
         line-height: 1.5;
         @include mobile {
             margin-left: rem(20px);
-            font-size: rem(12px);
+            font-size: 2vw;
             position: absolute;
             bottom: 2%;
             width: 40%;
@@ -86,7 +112,6 @@ h3 {
         justify-content: center;
         padding-top: rem(10px);
         white-space: nowrap;
-        transition: all 0.6s ease;
         
         @include mobile {
             display: none;
@@ -104,11 +129,15 @@ h3 {
                     opacity: 0.9;
                     transition: background 0.4s ease;
                     box-shadow: 3px 3px 5px black;
+                    color: white;
                 }
             }
             &--view {
                 margin-right: rem(10px);
                 background-color: rgba(255, 255, 255, 0.932);
+                color: black;
+            }
+            &--detail:hover, &--detail:focus {
                 color: black;
             }
         }
@@ -119,14 +148,15 @@ h3 {
 .movieList {
     &__box {
         position: relative;
-        padding: rem(20px) 0;
+        padding: rem(20px) rem(20px);
     }
     @include desktop {
         margin-top: rem(-60px);
+        // margin: rem(-60px) rem(20px) 0 rem(20px);
         &__box.inVisual {
             position: relative;
             top: rem(-10px);
-            z-index: 50;
+            z-index: 1;
         }
     }
 
@@ -138,30 +168,34 @@ h3 {
     // }
 
     &__title {
-        font-size: 1.85vw;
+        font-size: rem(18px);
         display: inline-block;
-        padding: rem(10px) rem(5px);
+        padding: rem(10px) 0;
         @include mobile {
             font-size: rem(14px);
         }
     }
-    &__wrap {
+    &__homeWrap {
         display: flex;
         // border: 1px solid orange;
         margin-bottom: rem(20px);
         overflow: hidden;
-        padding: 2vw;
+        // padding: 2vw;
 
         &--desc {
             margin-top: rem(10px);
-            font-size: 1.6vw;
+            font-size: rem(16px);
         }
     }
 
-    &__item {
+    &__homeItem {
         margin-right: rem(10px);
+        padding: rem(2px);
+        margin: rem(2px);
         position: relative;
-
+        &:last-child {
+            margin-right: 0;
+        }
         &--thumbnail {
             border-radius: rem(5px);
         }
@@ -176,6 +210,9 @@ h3 {
             &--thumbnail {
                 width: 100%;
             }
+            &:nth-child(2) {
+                margin-right: 0;
+            }
         }
         @include desktop {
             width: 20%;
@@ -187,25 +224,29 @@ h3 {
     }
     &__more {
         color: rgba(255, 255, 255, 0.7);
-        font-size: 1.4vw;
         position: absolute;
-        top: rem(30px);
-        right: 2%;
         padding: rem(8px);
+        &:hover, &:focus {
+            color: gray;
+        }
+        @include mobile {
+            font-size: rem(12px);
+            top: rem(25px);
+            right: rem(10px);
+        }
+        @include desktop {
+            font-size: rem(16px);
+            top: rem(25px);
+            right: rem(15px);
+        }
     }
-    // visual까지 메뉴들 끌어올리기
-    // @include desktop {
-    //     top: rem(-100px);
-    //     position: relative;
-    //     z-index:9999;
-    // }
 }
 
 // :hover
 .movieList__detail {
     display: none;
 }
-.movieList__item:hover {
+.movieList__homeItem:hover, .movieList__ankor:focus {
     .movieList__detail {
         @include desktop {
             display: block;
@@ -223,6 +264,12 @@ h3 {
                 padding: 5% 5%;
                 font-size: 1.4vw;
                 border-radius: rem(5px);
+                &:hover, &:focus {
+                    font-weight: 700;
+                    padding: 7% 7%;
+                    // color: $primary;
+                }
+                transition: padding 0.2s ease;
             }
             &--run {
                 position: absolute;
@@ -241,18 +288,24 @@ h3 {
             }
         }
     }
+
+    .movieList__homeItem--thumbnail {
+        box-shadow: 0px 0px 20px black;
+    }
+
+    .movieList__homeWrap--desc {
+        transition: all 0.4s ease;
+        color: $primary;
+    }
 }
 
 // 하이라이트
 .highlight {
     background-color: $lightblack;
-    padding-left: rem(20px);
-    margin-left: rem(-20px);
-    padding: rem(20px) 0 rem(20px) rem(20px);
-    
+    padding: rem(20px) rem(20px) rem(20px) rem(20px);
     position: relative;
 
-    .movieList__item {
+    .movieList__homeItem {
         @include desktop {
             width: 25%;
         }
@@ -261,4 +314,3 @@ h3 {
         }
     }
 }
-
