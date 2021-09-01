@@ -7,9 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gotcha - 평가하기</title>
     <link rel="stylesheet" href="css/index.css" />
+    <script src="src/js/component/header.js" type="text/javascript" defer></script>
+    <script src="src/js/component/footer.js" type="text/javascript" defer></script>
+    <!-- temp -->
+    <script src="src/js/common.js" type="text/javascript" defer></script>
 </head>
 
 <body>
+    <header-component></header-component>
     <div class="evalBanner">
         <h2 id="numOfEvaluateHeading" class="a11y-hidden">평가한 작품 수</h2>
         <span id="numOfEvaluate" aria-describedby="numOfEvaluateHeading" class="evalBanner--selected">11</span>
@@ -245,6 +250,7 @@
             </li>
         </ul>
     </div>
+    <footer-component></footer-component>
     <script src="./src/js/evaluate.js"></script>
 </body>
 
