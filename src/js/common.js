@@ -1,7 +1,11 @@
 (function () {
-    let bannerClose = document.getElementsByClassName('topBanner--closeButton')[0];
+    let bannerClose = document.querySelector('.topBanner--closeButton');
     let mainTabOpen = document.getElementsByClassName('tabMenu')[0];
     let mainTabs = document.querySelectorAll('.tabMenu__header');
+    let mainLogo = document.querySelector('.header__logo--link');
+    let mainEvalButton = document.querySelector('.eval-button');
+    let moMenu = document.querySelector('.header__naviWrap');
+    let moMenuButton = document.querySelector('.header--openButton');
     let searchForm = document.getElementsByClassName('header__searchForm')[0];
     let searchButton = document.getElementsByClassName('header__searchForm--button')[0];
     let searchInput = document.getElementById('searchInput');
@@ -14,20 +18,67 @@
     // 탑 배너 닫기
     bannerClose.addEventListener('click', function () {
         this.parentElement.classList.remove('is-active');
+        headerPos = header.offsetTop;
     })
+
+    // header fixed
+    let header, headerPos;
+    header = document.querySelector('.header');
+    headerPos = header.offsetTop;
+
+    function headerFixed(){
+        if ( window.pageYOffset > headerPos ) {
+            header.classList.add("is-active");
+            document.querySelector('body').classList.add("is-active");
+
+        } else {
+            header.classList.remove("is-active");
+            document.querySelector('body').classList.remove("is-active");
+        }
+    }
+
+    document.addEventListener('scroll',headerFixed);
+
+    // 모바일 메인 메뉴
+    moMenuButton.addEventListener('focusin', function (){
+        moMenu.classList.add('is-active');
+    });
+
+    moMenu.addEventListener('mouseover', function (){
+        moMenu.classList.add('is-active');
+    });
+
+    moMenu.addEventListener('mouseleave', function (){
+        moMenu.classList.remove('is-active');
+    });
 
     // 탐색하기 마우스오버, 포커스 이벤트 제어
+    // 마우스 오버 됐을 떄
     mainTabOpen.addEventListener('mouseover', function () {
         this.classList.add('is-active');
-    })
+    });
 
+    // 포커스 들어갔을 때
     mainTabOpen.addEventListener('focusin', function () {
         this.classList.add('is-active');
-    })
+    });
 
+    // 마우스 떠났을 떄
     mainTabOpen.addEventListener('mouseleave', function () {
         this.classList.remove('is-active');
-    })
+    });
+
+    // 포커스 떠날 때 & 백탭
+    mainLogo.addEventListener('focusin', function (){
+        mainTabOpen.classList.remove('is-active');
+        moMenu.classList.remove('is-active');
+    });
+
+    mainEvalButton.addEventListener('focusin', function (){
+        mainTabOpen.classList.remove('is-active');
+    });
+
+
 
 
     // 탐색하게 탭 제어하기
@@ -82,5 +133,6 @@
     // 백탭
     searchButton.addEventListener('focusin', function () {
         profileOpens.classList.remove('is-active');
+        moMenu.classList.remove('is-active');
     })
 })();
