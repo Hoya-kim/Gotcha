@@ -2,10 +2,13 @@
     let bannerClose = document.getElementsByClassName('topBanner--closeButton')[0];
     let mainTabOpen = document.getElementsByClassName('tabMenu')[0];
     let mainTabs = document.querySelectorAll('.tabMenu__header');
-    let mainTabPanels = document.querySelectorAll('.tabMenu__panel');
     let searchForm = document.getElementsByClassName('header__searchForm')[0];
     let searchButton = document.getElementsByClassName('header__searchForm--button')[0];
     let searchInput = document.getElementById('searchInput');
+    let profileOpens = document.querySelector('.header__userConfig');
+    let profileOpenButton = profileOpens.querySelector('.header__userConfig--user');
+    let lastElem = profileOpens.querySelectorAll('a');
+    let lastTarget = lastElem[lastElem.length - 1];
 
 
     // 탑 배너 닫기
@@ -56,10 +59,6 @@
         searchForm.classList.remove('is-active');
     })
 
-    let profileOpens = document.querySelector('.header__userConfig');
-    let profileOpenButton = profileOpens.querySelector('.header__userConfig--user');
-    let lastElem = profileOpens.querySelectorAll('a');
-    let lastTarget = lastElem[lastElem.length - 1];
 
     // 프로필 마우스 오버 & 포커스 시 동작 제어
     profileOpens.addEventListener('mouseover', function (){

@@ -47,10 +47,6 @@
     }
 
     @include mobile {
-
-    }
-
-    @include mobile {
         padding-left: rem(44px);
         padding-right: rem(44px);
     }
@@ -123,7 +119,9 @@
     background: #ddd;
 
     @include mobile {
-
+        height: rem(64px);
+        padding: 0 rem(20px);
+        font-size: rem(14px);
     }
 
     @include desktop {
@@ -136,13 +134,26 @@
     }
 
     &__logo {
-        margin: 0 rem(22px) 0 0;
+        @include mobile {
+            margin:0 rem(10px) 0 0;
+        }
+        @include desktop {
+            margin: 0 rem(22px) 0 0;
+        }
+
 
         &--link {
             display: block;
-            width: rem(94px);
             padding: rem(18px) 0;
             outline-offset: -2px;
+
+            @include mobile {
+                width: rem(72px);
+            }
+
+            @include desktop {
+                width: rem(94px);
+            }
         }
     }
 
@@ -150,7 +161,9 @@
     // 메뉴 열기 버튼
     &--openButton {
         @include mobile {
-
+            padding: rem(24px) rem(20px) rem(24px) rem(10px);
+            border: 0;
+            background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDE2IDE2Ij4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTIwNCAtOSkiIGZpbGwtb3BhY2l0eT0iMC44OCI+CiAgICAgICAgPHBhdGggZmlsbD0iI2ZmZmZmZiIgZD0iTTIxMi4xMjEgMTkuMzMxbDMuODE3LTQuMDA0YS4xNjcuMTY3IDAgMCAwLS4xMjEtLjI4MmgtNy42MzNhLjE2Ny4xNjcgMCAwIDAtLjEyLjI4MmwzLjgxNiA0LjAwNGEuMTY3LjE2NyAwIDAgMCAuMjQxIDAiLz4KICAgIDwvZz4KPC9zdmc+Cg==) no-repeat right center;
         }
 
         @include desktop {
@@ -160,17 +173,34 @@
 
     // Navigation
     &__navigation {
-        display: flex;
+        @include mobile {
+            //display: none;
+            position: absolute;
+            background: #555;
+        }
+
+        @include desktop {
+            display: flex;
+        }
 
         &--item {
-            margin: 0 rem(6px);
+            @include desktop {
+                margin: 0 rem(6px);
+            }
         }
 
         &--link {
             display: block;
-            padding: rem(27px) rem(4px);
             transition: all 0.2s;
             outline-offset: -2px;
+
+            @include mobile {
+                padding: rem(10px) rem(15px);
+            }
+
+            @include desktop {
+                padding: rem(27px) rem(4px);
+            }
 
             &:hover {
                 opacity: 0.8;
@@ -180,103 +210,110 @@
 
     // 탐색하기 Tab Menu
     @at-root .tabMenu {
-        position: relative;
-
-        &.is-active &__container {
-            display: block;
+        @include mobile{
+            &__container{
+                display: none;
+            }
         }
+        @include desktop{
+            position: relative;
 
-        &__container {
-            position: absolute;
-            background: rgba($black, 0.9);
-            display: none;
-            &.is-active{
+            &.is-active &__container {
                 display: block;
             }
 
-            @include desktop {
-                width: rem(515px);
-                top: 100%;
-                left: 0;
-                padding-top: rem(52px);
-            }
-
-            &:before {
-                content: '';
+            &__container {
                 position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: rem(52px);
-                background: #333;
-            }
-        }
+                background: rgba($black, 0.9);
+                display: none;
 
-        &__item.is-active {
-            .tabMenu__header {
-                font-weight: 700;
-
-                &:after {
-                    content: '';
+                &.is-active {
                     display: block;
+                }
+
+                @include desktop {
+                    width: rem(515px);
+                    top: 100%;
+                    left: 0;
+                    padding-top: rem(52px);
+                }
+
+                &:before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
                     width: 100%;
-                    height: 1px;
-                    background: #fff;
-                    margin-top: -1px;
+                    height: rem(52px);
+                    background: #333;
                 }
             }
 
-            .tabMenu__panel {
-                display: flex;
-                padding: rem(10px) rem(5px);
-            }
-        }
+            &__item.is-active {
+                .tabMenu__header {
+                    font-weight: 700;
 
-        &__header {
-            position: absolute;
-            left: 0;
-            top: 0;
-            padding: 0 rem(16px);
-            line-height: 52px;
-            background: 0;
-            border: 0;
-            outline-offset: -3px;
-
-            &--country {
-                transform: translateX(100%);
-            }
-
-            &--point {
-                transform: translateX(200%);
-            }
-        }
-
-        &__panel {
-            position: absolute;
-            top: 52px;
-            left: 0;
-            display: none;
-            flex-wrap: wrap;
-            background: #111;
-
-            &--item {
-                width: 33.334%;
-                font-size: rem(14px);
-            }
-
-            &--link {
-                display: block;
-
-                @include desktop {
-                    padding: rem(10px) rem(16px);
-                    &:hover {
-                        background-color: #555;
+                    &:after {
+                        content: '';
+                        display: block;
+                        width: 100%;
+                        height: 1px;
+                        background: #fff;
+                        margin-top: -1px;
                     }
                 }
 
+                .tabMenu__panel {
+                    display: flex;
+                    padding: rem(10px) rem(5px);
+                }
+            }
+
+            &__header {
+                position: absolute;
+                left: 0;
+                top: 0;
+                padding: 0 rem(16px);
+                line-height: 52px;
+                background: 0;
+                border: 0;
+                outline-offset: -3px;
+
+                &--country {
+                    transform: translateX(100%);
+                }
+
+                &--point {
+                    transform: translateX(200%);
+                }
+            }
+
+            &__panel {
+                position: absolute;
+                top: 52px;
+                left: 0;
+                display: none;
+                flex-wrap: wrap;
+                background: #111;
+
+                &--item {
+                    width: 33.334%;
+                    font-size: rem(14px);
+                }
+
+                &--link {
+                    display: block;
+
+                    @include desktop {
+                        padding: rem(10px) rem(16px);
+                        &:hover {
+                            background-color: #555;
+                        }
+                    }
+
+                }
             }
         }
-
     }
 
     // Search Form
@@ -297,11 +334,19 @@
         }
 
         &--button {
-            padding: rem(27px) rem(5px) rem(27px) rem(22px);
-            margin-right: rem(20px);
             border: 0;
             background: url("data:image/svg+xml,%3Csvg width='16px' height='16px' viewBox='0 0 16 16' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cg stroke='none' stroke-width='1' fill='none' fill-rule='evenodd' fill-opacity='0.88'%3E%3Cg transform='translate(1.000000, 1.000000)' fill='%23FFFFFF' fill-rule='nonzero'%3E%3Cpath d='M13.9988333,12.8959444 L12.8959444,13.9988333 L8.72316667,9.82605556 C7.812,10.5081667 6.68461111,10.9172778 5.45883333,10.9172778 C2.44377778,10.9172778 0,8.4735 0,5.45883333 C0,2.44377778 2.44377778,0 5.45883333,0 C8.4735,0 10.9172778,2.44377778 10.9172778,5.45883333 C10.9172778,6.68461111 10.5081667,7.812 9.82605556,8.72316667 L13.9988333,12.8959444 L13.9988333,12.8959444 Z M5.45883333,1.55944444 C3.30516667,1.55944444 1.55944444,3.30516667 1.55944444,5.45883333 C1.55944444,7.61211111 3.30516667,9.35783333 5.45883333,9.35783333 C7.61211111,9.35783333 9.35783333,7.61211111 9.35783333,5.45883333 C9.35783333,3.30516667 7.61211111,1.55944444 5.45883333,1.55944444 L5.45883333,1.55944444 Z' id='Shape'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/svg%3E") no-repeat 0 56%;
             transition: all 0.2s;
+
+            @include mobile{
+                padding: rem(24px) rem(5px) rem(24px) rem(20px);
+                margin-right: rem(10px);
+            }
+
+            @include desktop{
+                padding: rem(27px) rem(5px) rem(27px) rem(22px);
+                margin-right: rem(20px);
+            }
 
             &:hover {
                 opacity: 0.8;
@@ -311,20 +356,36 @@
         &--input {
             position: absolute;
             top: 50%;
-            right: rem(20px);
             transform: translateY(-50%);
             background: url("data:image/svg+xml,%3Csvg width='16px' height='16px' viewBox='0 0 16 16' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cg stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg transform='translate(1.000000, 1.000000)' fill='%23121212' fill-rule='nonzero'%3E%3Cpath d='M13.9988333,12.8959444 L12.8959444,13.9988333 L8.72316667,9.82605556 C7.812,10.5081667 6.68461111,10.9172778 5.45883333,10.9172778 C2.44377778,10.9172778 0,8.4735 0,5.45883333 C0,2.44377778 2.44377778,0 5.45883333,0 C8.4735,0 10.9172778,2.44377778 10.9172778,5.45883333 C10.9172778,6.68461111 10.5081667,7.812 9.82605556,8.72316667 L13.9988333,12.8959444 L13.9988333,12.8959444 Z M5.45883333,1.55944444 C3.30516667,1.55944444 1.55944444,3.30516667 1.55944444,5.45883333 C1.55944444,7.61211111 3.30516667,9.35783333 5.45883333,9.35783333 C7.61211111,9.35783333 9.35783333,7.61211111 9.35783333,5.45883333 C9.35783333,3.30516667 7.61211111,1.55944444 5.45883333,1.55944444 L5.45883333,1.55944444 Z' id='Shape'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/svg%3E") no-repeat 3% 50%;
             background-color: $white;
             border-radius: 4px;
-            width: rem(215px);
             display: none;
+
+            @include mobile{
+                right: rem(10px);
+                width: rem(180px);
+            }
+
+            @include desktop{
+                right: rem(20px);
+                width: rem(215px);
+            }
 
             input {
                 width: 100%;
                 border: 0;
-                padding: rem(6px) rem(30px);
-                font-size: rem(14px);
                 background: transparent;
+
+                @include mobile{
+                    padding: rem(6px) rem(30px);
+                    font-size: rem(12px);
+                }
+
+                @include desktop{
+                    padding: rem(6px) rem(30px);
+                    font-size: rem(14px);
+                }
             }
         }
     }
@@ -333,12 +394,21 @@
     &__trending {
         position: absolute;
         top: 100%;
-        right: rem(20px);
         padding: rem(10px) 0;
-        font-size: rem(14px);
         background: #333;
-        width: rem(215px);
         display: none;
+
+        @include mobile{
+            right: rem(10px);
+            font-size: rem(12px);
+            width: rem(180px);
+        }
+
+        @include desktop{
+            right: rem(20px);
+            font-size: rem(14px);
+            width: rem(215px);
+        }
 
         &--Title {
             margin-bottom: rem(5px);
@@ -360,6 +430,7 @@
     // User Config
     &__userConfig {
         position: relative;
+
         &.is-active {
             .header__userConfig--list {
                 display: block;
@@ -367,7 +438,14 @@
         }
 
         &--user {
-            padding: rem(27px) rem(20px) rem(27px) rem(32px);
+            @include mobile{
+                padding: rem(24px) rem(24px);
+                text-indent: -9999px;
+            }
+
+            @include desktop{
+                padding: rem(27px) rem(20px) rem(27px) rem(32px);
+            }
             border: 0;
             background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDE2IDE2Ij4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTIwNCAtOSkiIGZpbGwtb3BhY2l0eT0iMC44OCI+CiAgICAgICAgPHBhdGggZmlsbD0iI2ZmZmZmZiIgZD0iTTIxMi4xMjEgMTkuMzMxbDMuODE3LTQuMDA0YS4xNjcuMTY3IDAgMCAwLS4xMjEtLjI4MmgtNy42MzNhLjE2Ny4xNjcgMCAwIDAtLjEyLjI4MmwzLjgxNiA0LjAwNGEuMTY3LjE2NyAwIDAgMCAuMjQxIDAiLz4KICAgIDwvZz4KPC9zdmc+Cg==) no-repeat right center;
 
@@ -395,7 +473,8 @@
             background: #333;
             font-size: rem(14px);
             display: none;
-            &.is-active{
+
+            &.is-active {
                 display: block;
             }
 
