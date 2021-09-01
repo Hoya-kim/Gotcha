@@ -1,0 +1,48 @@
+{
+  "name": "Gotcha",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "autoprefixer": "^10.3.3",
+    "css-loader": "^6.2.0",
+    "live-server": "^1.2.1",
+    "mini-css-extract-plugin": "^2.2.0",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.3.6",
+    "postcss-loader": "^6.1.1",
+    "postcss-preset-env": "^6.7.0",
+    "rimraf": "^2.7.1",
+    "sass": "^1.38.2",
+    "sass-loader": "^12.1.0",
+    "style-loader": "^3.2.1",
+    "webpack": "^5.51.1",
+    "webpack-cli": "^4.8.0",
+    "webpack-dev-server": "^4.0.0"
+  },
+  "scripts": {
+    "start": "run-p watch serve",
+    "build": "webpack build",
+    "sass": "sass ./src/scss:css",
+    "watch": "npm run sass -- --watch",
+    "serve": "live-server --port=3000",
+    "clear": "rimraf -rf build dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hoya-kim/Gotcha.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Hoya-kim/Gotcha/issues"
+  },
+  "homepage": "https://github.com/Hoya-kim/Gotcha#readme",
+  "browserslist": [
+    "defaults",
+    "not dead",
+    "> 1% in KR",
+    "ie 10"
+  ]
+}

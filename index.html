@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gotcha</title>
+    <!-- <link rel="stylesheet" href="dist/css/style.css"> -->
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <script src="src/js/component/header.js" type="text/javascript" defer></script>
+    <script src="src/js/component/footer.js" type="text/javascript" defer></script>
+    <!-- temp -->
+    <script src="src/js/common.js" type="text/javascript" defer></script>
+</head>
+<body>
+    <!-- header -->
+    <header-component></header-component>
+    <!-- skipNavigation -->
+    <div class="skipNavigation">
+        <a href="#continue">이어보기 바로가기</a>
+        <a href="#trending">인기작 바로가기</a>
+        <a href="#wanted">보고싶어요 바로가기</a>
+    </div>
+    <!-- main -->
+    <main class="container">
+        <section class="visual">
+            <h2 class="hide">오늘의 추천 영상</h2>
+            <figure class="visual__imgWrap">
+                <picture>
+                    <source srcset="./src/images/home/title_background.jpeg" type="image/webp">
+                    <img src="./src/images/home/title_background.jpeg" class="visual__mainImg" alt="팝콘">
+                </picture>
+            </figure>
+            <!-- 타이틀 -->
+            <div class="visual__gradient">
+                <div class="visual__title">
+                    <figure class="visual__title--wrap">
+                        <picture>
+                            <source srcset="./src/images/home/title.png" type="image/webp">
+                            <img src="./src/images/home/title.png" class="visual__title--logo" alt="팝콘">
+                        </picture>
+                        <figcaption class="visual__title--desc">
+                            평화로운 토요일, 호야와 쓰리박의 팝콘을 둘러싼 운명의 장난이 시작된다.
+                            <!-- 평화로운 토요일, 호야와 쓰리박은 수상한 팝콘을 사게된다.
+                            놀랍게도 그들이 산 팝콘은 2등 상품을 가지고 있었는데... 이 쿠폰을 가지기 위해 치열한 경쟁을 시작하게 된다...! -->
+                        </figcaption>
+                    </figure>
+                    <ul class="visual__btnGroup">
+                        <!-- 기존 왓챠: 목록 보기 -> 넷플릭스의 재생, 상세정보 항목이 더 좋아보여서 가져옴 -->
+                        <li><a href="#" class="visual__btnGroup--view">► 재생</a></li>
+                        <li><a href="#" class="visual__btnGroup--detail">상세 정보</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- #1 -->
+        <section class="movieList">
+            <div class="movieList__box inVisual" id="continue">
+                <h3 id="movieList__title1">
+                    <a href="#" class="movieList__title">이어보기</a>
+                </h3>
+                <ul class="movieList__homeWrap">
+                    <li class="movieList__homeItem">
+                        <a href="#" class="movieList__ankor" aria-label="POINT: MOVIE 재생하기">
+                            <figure class="movieList__homeItem--wrap">
+                                <picture>
+                                    <source srcset="./src/images/home/title_background.jpeg" type="image/webp">
+                                    <img src="./src/images/home/title_background.jpeg" class="movieList__homeItem--thumbnail" alt="서프라이즈 팝콘">
+                                </picture>
+                                <figcaption class="movieList__homeWrap--desc">
+                                    <p class="movieList__homeItem--title"></p>
+                                    POINT: MOVIE
+                                </figcaption>
+                            </figure>
+                        </a>
+                        <div class="movieList__detail">
+                            <a href="#" class="movieList__detail--run">► 재생</a>
+                            <a href="#" class="movieList__detail--desc">자세히 보기</a> 
+                        </div>
+                    </li>
+
+                    <li class="movieList__homeItem">
+                        <a href="#" class="movieList__ankor" aria-label="POINT: MOVIE 재생하기">
+                            <figure class="movieList__homeItem--wrap">
+                                <picture>
+                                    <source srcset="./src/images/home/title_background.jpeg" type="image/webp">
+                                    <img src="./src/images/home/title_background.jpeg" class="movieList__homeItem--thumbnail" alt="서프라이즈 팝콘">
+                                </picture>
+                                <figcaption class="movieList__homeWrap--desc">
+                                    <p class="movieList__homeItem--title"></p>
+                                    POINT: MOVIE
+                                </figcaption>
+                            </figure>
+                        </a>
+                        <div class="movieList__detail">
+                            <a href="#" class="movieList__detail--run">► 재생</a>
+                            <a href="#" class="movieList__detail--desc">자세히 보기</a> 
+                        </div>
+                    </li>
+                    <li class="movieList__homeItem">
+                        <a href="#" class="movieList__ankor" aria-label="POINT: MOVIE 재생하기">
+                            <figure class="movieList__homeItem--wrap">
+                                <picture>
+                                    <source srcset="./src/images/home/title_background.jpeg" type="image/webp">
+                                    <img src="./src/images/home/title_background.jpeg" class="movieList__homeItem--thumbnail" alt="서프라이즈 팝콘">
+                                </picture>
+                                <figcaption class="movieList__homeWrap--desc">
+                                    <p class="movieList__homeItem--title"></p>
+                                    POINT: 
+                                </figcaption>
+                            </figure>
+                        </a>
+                        <div class="movieList__detail">
+                            <a href="#" class="movieList__detail--run">► 재생</a>
+                            <a href="#" class="movieList__detail--desc">자세히 보기</a> 
+                        </div>
+                    </li>
+                    <li class="movieList__homeItem">
+                        <a href="#" class="movieList__ankor" aria-label="POINT: MOVIE 재생하기">
+                            <figure class="movieList__homeItem--wrap">
+                                <picture>
+                                    <source srcset="./src/images/home/title_background.jpeg" type="image/webp">
+                                    <img src="./src/images/home/title_background.jpeg" class="movieList__homeItem--thumbnail" alt="서프라이즈 팝콘">
+                                </picture>
+                                <figcaption class="movieList__homeWrap--desc">
+                                    <p class="movieList__homeItem--title"></p>
+                                    POINT: MOVIE
+                                </figcaption>
+                            </figure>
+                        </a>
+                        <div class="movieList__detail">
+                            <a href="#" class="movieList__detail--run">► 재생</a>
+                            <a href="#" class="movieList__detail--desc">자세히 보기</a> 
+                        </div>
+                    </li>
+                    <li class="movieList__homeItem">
+                        <a href="#" class="movieList__ankor" aria-label="POINT: MOVIE 재생하기">
+                            <figure class="movieList__homeItem--wrap">
+                                <picture>
+                                    <source srcset="./src/images/home/title_background.jpeg" type="image/webp">
+                                    <img src="./src/images/home/title_background.jpeg" class="movieList__homeItem--thumbnail" alt="서프라이즈 팝콘">
+                                </picture>
+                                <figcaption class="movieList__homeWrap--desc">
+                                    <p class="movieList__homeItem--title"></p>
+                                    POINT: MOVIE
+                                </figcaption>
+                            </figure>
+                        </a>
+                        <div class="movieList__detail">
+                            <a href="#" class="movieList__detail--run">► 재생</a>
+                            <a href="#" class="movieList__detail--desc">자세히 보기</a> 
+                        </div>
+                    </li>
+                </ul>
+                <!-- 더보기 -->
+                <!-- TODO: aria-labelledby추가  -->
+                <a href="더보기" class="movieList__more" aria-labelledby="movieList__title1">+ 더보기</a>
+            </div>
+
+
+
+
+
+            <!-- #2 -->
+            <div class="highlight moveList" id="trending">
+                <h3 id="movieList__title2">
+                    <a href="#" class="movieList__title">실시간 인기작</a>
+                </h3>
+                <ul class="movieList__homeWrap">
+                    <li class="movieList__homeItem">
+                        <a href="#" class="movieList__ankor" aria-label="POINT: MOVIE 재생하기">
+                            <figure class="movieList__homeItem--wrap">
+                                <picture>
+                                    <source srcset="./src/images/home/title_background.jpeg" type="image/webp">
+                                    <img src="./src/images/home/title_background.jpeg" class="movieList__homeItem--thumbnail" alt="서프라이즈 팝콘">
+                                </picture>
+                                <figcaption class="movieList__homeWrap--desc">
+                                    <p class="movieList__homeItem--title"></p>
+                                    POINT: MOVIE
+                                </figcaption>
+                            </figure>
+                        </a>
+                        <div class="movieList__detail">
+                            <a href="#" class="movieList__detail--run">► 재생</a>
+                            <a href="#" class="movieList__detail--desc">자세히 보기</a> 
+                        </div>
+                    </li>
+
+                    <li class="movieList__homeItem">
+                        <a href="#" class="movieList__ankor" aria-label="POINT: MOVIE 재생하기">
+                            <figure class="movieList__homeItem--wrap">
+                                <picture>
+                                    <source srcset="./src/images/home/title_background.jpeg" type="image/webp">
+                                    <img src="./src/images/home/title_background.jpeg" class="movieList__homeItem--thumbnail" alt="서프라이즈 팝콘">
+                                </picture>
+                                <figcaption class="movieList__homeWrap--desc">
+                                    <p class="movieList__homeItem--title"></p>
+                                    POINT: MOVIE
+                                </figcaption>
+                            </figure>
+                        </a>
+                        <div class="movieList__detail">
+                            <a href="#" class="movieList__detail--run">► 재생</a>
+                            <a href="#" class="movieList__detail--desc">자세히 보기</a> 
+                        </div>
+                    </li>
+                    <li class="movieList__homeItem">
+                        <a href="#" class="movieList__ankor" aria-label="POINT: MOVIE 재생하기">
+                            <figure class="movieList__homeItem--wrap">
+                                <picture>
+                                    <source srcset="./src/images/home/title_background.jpeg" type="image/webp">
+                                    <img src="./src/images/home/title_background.jpeg" class="movieList__homeItem--thumbnail" alt="서프라이즈 팝콘">
+                                </picture>
+                                <figcaption class="movieList__homeWrap--desc">
+                                    <p class="movieList__homeItem--title"></p>
+                                    POINT: MOVIE
+                                </figcaption>
+                            </figure>
+                        </a>
+                        <div class="movieList__detail">
+                            <a href="#" class="movieList__detail--run">► 재생</a>
+                            <a href="#" class="movieList__detail--desc">자세히 보기</a> 
+                        </div>
+                    </li>
+                    <li class="movieList__homeItem">
+                        <a href="#" class="movieList__ankor" aria-label="POINT: MOVIE 재생하기">
+                            <figure class="movieList__homeItem--wrap">
+                                <picture>
+                                    <source srcset="./src/images/home/title_background.jpeg" type="image/webp">
+                                    <img src="./src/images/home/title_background.jpeg" class="movieList__homeItem--thumbnail" alt="서프라이즈 팝콘">
+                                </picture>
+                                <figcaption class="movieList__homeWrap--desc">
+                                    <p class="movieList__homeItem--title"></p>
+                                    POINT: MOVIE
+                                </figcaption>
+                            </figure>
+                        </a>
+                        <div class="movieList__detail">
+                            <a href="#" class="movieList__detail--run">► 재생</a>
+                            <a href="#" class="movieList__detail--desc">자세히 보기</a> 
+                        </div>
+                    </li>
+                </ul>
+                <!-- 더보기 -->
+                <!-- TODO: aria-labelledby추가  -->
+                <a href="더보기" class="movieList__more" aria-labelledby="movieList__title2">+ 더보기</a>
+            </div>
+
+
+
+
+            <!-- #3 -->
+            <div class="movieList__box" id="wanted">
+                <h3 id="movieList__title3">
+                    <a href="#" class="movieList__title">보고싶어요</a>
+                </h3>
+                <ul class="movieList__homeWrap">
+                    <li class="movieList__homeItem">
+                        <a href="#" class="movieList__ankor" aria-label="POINT: MOVIE 재생하기">
+                            <figure class="movieList__homeItem--wrap">
+                                <picture>
+                                    <source srcset="./src/images/home/title_background.jpeg" type="image/webp">
+                                    <img src="./src/images/home/title_background.jpeg" class="movieList__homeItem--thumbnail" alt="서프라이즈 팝콘">
+                                </picture>
+                                <figcaption class="movieList__homeWrap--desc">
+                                    <p class="movieList__homeItem--title"></p>
+                                    POINT: MOVIE
+                                </figcaption>
+                            </figure>
+                        </a>
+                        <div class="movieList__detail">
+                            <a href="#" class="movieList__detail--run">► 재생</a>
+                            <a href="#" class="movieList__detail--desc">자세히 보기</a> 
+                        </div>
+                    </li>
+
+                    <li class="movieList__homeItem">
+                        <a href="#" class="movieList__ankor" aria-label="POINT: MOVIE 재생하기">
+                            <figure class="movieList__homeItem--wrap">
+                                <picture>
+                                    <source srcset="./src/images/home/title_background.jpeg" type="image/webp">
+                                    <img src="./src/images/home/title_background.jpeg" class="movieList__homeItem--thumbnail" alt="서프라이즈 팝콘">
+                                </picture>
+                                <figcaption class="movieList__homeWrap--desc">
+                                    <p class="movieList__homeItem--title"></p>
+                                    POINT: MOVIE
+                                </figcaption>
+                            </figure>
+                        </a>
+                        <div class="movieList__detail">
+                            <a href="#" class="movieList__detail--run">► 재생</a>
+                            <a href="#" class="movieList__detail--desc">자세히 보기</a> 
+                        </div>
+                    </li>
+                    <li class="movieList__homeItem">
+                        <a href="#" class="movieList__ankor" aria-label="POINT: MOVIE 재생하기">
+                            <figure class="movieList__homeItem--wrap">
+                                <picture>
+                                    <source srcset="./src/images/home/title_background.jpeg" type="image/webp">
+                                    <img src="./src/images/home/title_background.jpeg" class="movieList__homeItem--thumbnail" alt="서프라이즈 팝콘">
+                                </picture>
+                                <figcaption class="movieList__homeWrap--desc">
+                                    <p class="movieList__homeItem--title"></p>
+                                    POINT: MOVIE
+                                </figcaption>
+                            </figure>
+                        </a>
+                        <div class="movieList__detail">
+                            <a href="#" class="movieList__detail--run">► 재생</a>
+                            <a href="#" class="movieList__detail--desc">자세히 보기</a> 
+                        </div>
+                    </li>
+                    <li class="movieList__homeItem">
+                        <a href="#" class="movieList__ankor" aria-label="POINT: MOVIE 재생하기">
+                            <figure class="movieList__homeItem--wrap">
+                                <picture>
+                                    <source srcset="./src/images/home/title_background.jpeg" type="image/webp">
+                                    <img src="./src/images/home/title_background.jpeg" class="movieList__homeItem--thumbnail" alt="서프라이즈 팝콘">
+                                </picture>
+                                <figcaption class="movieList__homeWrap--desc">
+                                    <p class="movieList__homeItem--title"></p>
+                                    POINT: MOVIE
+                                </figcaption>
+                            </figure>
+                        </a>
+                        <div class="movieList__detail">
+                            <a href="#" class="movieList__detail--run">► 재생</a>
+                            <a href="#" class="movieList__detail--desc">자세히 보기</a> 
+                        </div>
+                    </li>
+                    <li class="movieList__homeItem">
+                        <a href="#" class="movieList__ankor" aria-label="POINT: MOVIE 재생하기">
+                            <figure class="movieList__homeItem--wrap">
+                                <picture>
+                                    <source srcset="./src/images/home/title_background.jpeg" type="image/webp">
+                                    <img src="./src/images/home/title_background.jpeg" class="movieList__homeItem--thumbnail" alt="서프라이즈 팝콘">
+                                </picture>
+                                <figcaption class="movieList__homeWrap--desc">
+                                    <p class="movieList__homeItem--title"></p>
+                                    POINT: MOVIE
+                                </figcaption>
+                            </figure>
+                        </a>
+                        <div class="movieList__detail">
+                            <a href="#" class="movieList__detail--run">► 재생</a>
+                            <a href="#" class="movieList__detail--desc">자세히 보기</a> 
+                        </div>
+                    </li>
+                </ul>
+                <!-- 더보기 -->
+                <!-- TODO: aria-labelledby추가  -->
+                <a href="더보기" class="movieList__more" aria-labelledby="movieList__title3">+ 더보기</a>
+            </div>
+        </section>
+    </main>
+    <!-- footer -->
+    <footer-component></footer-component>
+    <script src="./src/js/home.js"></script>
+</body>
+</html>

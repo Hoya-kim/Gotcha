@@ -1,0 +1,72 @@
+@use 'sass:math';
+
+// 고해상도 배경이미지 처리 ---------------------------------------------------- /
+@mixin bgRetina($file, $type, $width, $height) {
+    background-image: url('./../assets/images/'+ $file + '.'+ $type);
+    background-repeat: no-repeat;
+
+    @media (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 144dpi) {
+        & {
+            background-image: url('./../assets/images/'+ $file + '@2x.'+ #{$type});
+            background-size: $width $height;
+        }
+    }
+}
+
+// Float 해제를 위한 clear 스타일 ---------------------------------------------------- /
+@mixin clearFix {
+    &::after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+}
+
+// 텍스트 ellipsis ----------------------------------------------------------- /
+@mixin ellipsis {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+// 텍스트 ellipsis multiline ----------------------------------------------------------- /
+@mixin ellipsisMulti($line, $lineheight: 1.5) {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $line;
+    line-height: $lineheight * 1em;
+    max-height: $lineheight * $line * 1em;
+}
+
+// 반응형 iframe ----------------------------------------------------------- /
+@mixin responsiveIframe($widthRatio, $heightRatio) {
+    position: relative;
+    width: 100%;
+    height:0 !important;
+    padding-top: math.div($heightRatio, $widthRatio) * 100%;
+
+    iframe{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+// 미디어 쿼리 중단점 (Breakpoints) --------------------------------------------------------------- /
+$break: 768px;
+
+@mixin mobile {
+    @media (max-width: $break - 1) {
+        @content;
+    }
+}
+@mixin desktop {
+    @media (min-width: $break) {
+        @content;
+    }
+}

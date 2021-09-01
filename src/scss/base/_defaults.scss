@@ -1,0 +1,122 @@
+@use './../utils' as *;
+
+// 기본 스타일 -------------------------------------------------------------------- /
+// 기본 박스 사이징 설정 -------------------------------------------------------------- /
+body,
+body::before,
+body::after,
+body *,
+body *::before,
+body *::after {
+    box-sizing: border-box;
+}
+
+// 기본 여백 제거 ------------------------------------------------------------------ /
+[class]{
+    margin: 0;
+}
+
+// 기본 아웃라인 제거 (웹접근성 체크 포인트 - 기본 아웃라인 제거 후에는 반드시 커스텀 아웃라인 스타일 정의가 필요함) ------------------------------------------------------------------ /
+// a, input, button, select, textarea{
+//   outline: 0;
+// }
+
+// 본문 기본 폰트, 글자 크기, 굵기, 배경 색상 지정 --------------------------------------------- /
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap');
+body {
+    font-family: 'Noto Sans KR', 'Roboto', sans-serif;
+    font-size: inherit;
+    background-color: $lightblack;
+    color: $darkgray1;
+}
+
+// 제목 글자 크기 및 굵기 재지정 --------------------------------------------------------- /
+h1, h2, h3, h4, h5, h6{
+    font-size: 100%;
+    font-weight: inherit;
+}
+
+// 목록 안쪽 여백 및 불릿 제거 ---------------------------------------------------------- /
+ul, ol{
+    padding-left: 0;
+    list-style: none;
+}
+
+// 이미지에 발생하는 갭 제거 ------------------------------------------------------------ /
+img {
+    vertical-align: middle;
+}
+
+// 링크 요소의 밑줄 및 글자 색상 재 정의 ---------------------------------------------------- /
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+// 주소 및 강조 요소 스타일 재 정의 ------------------------------------------------------- /
+address, em {
+    font-style: normal;
+}
+
+// fieldset 요소의 테두리 및 여백 제거 -------------------------------------------------- /
+fieldset{
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+
+// 버튼 마우스 스타일 설정 ------------------------------------------------------------- /
+button{
+    cursor: pointer;
+    color: inherit;
+    font-size: inherit;
+}
+
+// form 요소 스타일 설정
+input::-ms-clear,
+input::-ms-reveal{
+    display:none;
+}
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button,
+input::-webkit-search-results-button,
+input::-webkit-search-results-decoration{
+    display:none;
+}
+
+input, button, textarea{
+    appearance: none;
+}
+
+// 숨김 컨텐츠 처리 ------------------------------------------------------------- /
+.a11y-hidden{
+    overflow: hidden;
+    position: absolute !important;
+    clip: rect(0, 0, 0, 0);
+    clip-path: inset(50%);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+}
+
+
+
+// SNS 배경이미지  ------------------------------------------------------------- /
+.sprite{
+    min-height: rem(36px);
+    padding-left: rem(36px);
+    //background-image: url(/src/images/sprite_sns.png);
+    background-repeat: no-repeat;
+
+    $sprites: facebook, twitter, instagram, blog;
+    $x: 0;
+    $y: 0;
+
+    @each $sprite in $sprites {
+        $i: index($sprites, $sprite);
+        &#{$sprite}{
+            background-position: $x $y;
+        }
+        $y: $y - 36px;
+    }
+}

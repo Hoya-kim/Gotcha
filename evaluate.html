@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gotcha - 평가하기</title>
+    <link rel="stylesheet" href="css/index.css" />
+    <script src="src/js/component/header.js" type="text/javascript" defer></script>
+    <script src="src/js/component/footer.js" type="text/javascript" defer></script>
+    <!-- temp -->
+    <script src="src/js/common.js" type="text/javascript" defer></script>
+</head>
+
+<body>
+    <header-component></header-component>
+    <div class="evalBanner">
+        <h2 id="numOfEvaluateHeading" class="a11y-hidden">평가한 작품 수</h2>
+        <span id="numOfEvaluate" aria-describedby="numOfEvaluateHeading" class="evalBanner--selected">11</span>
+        <span class="evalBanner--desc">더 하시기로 마음 먹으셨군요! 좋아요:)</span>
+        <div class="evalBanner__progressbar" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuetext="11" aria-valuemax="100">
+            <div class="evalBanner__progressbar--value"></div>
+        </div>
+        <a href="#" class="evalBanner__link"><em class="evalBanner__link--emphasize">WATCHA PEDIA</em>에서 내 취향결과 보기</a>
+    </div>
+    <div class="evalPosters__container">
+        <ul class="evalPosters--list">
+            <li class="evalPosters--item" tabindex="0">
+                <figure class="evalPosters__imgWrapper">
+                    <picture>
+                        <source srcset="http://placehold.it/280x400.webp" type="image/webp">
+                        <img aria-labelledby="poster1" class="evalPosters__imgWrapper--image" src="http://placehold.it/280x400.png" alt="">
+                    </picture>
+                </figure>
+                <div class="evalPosters__infoWrapper">
+                    <h3 id="poster1" class="evalPosters__infoWrapper--heading">신기전</h3>
+                    <span class="evalPosters__infoWrapper--released">2008</span>
+                    <div class="evalPosters__infoWrapper--stars">
+                        <span>★★★★★</span>
+                        <span>★★★★★</span>
+                    </div>
+                    <button class="evalPosters__infoWrapper--button">보고싶어요</button>
+                </div>
+            </li>
+            <!-- additional templates -->
+            <li class="evalPosters--item" tabindex="0">
+                <figure class="evalPosters__imgWrapper">
+                    <picture>
+                        <source srcset="http://placehold.it/280x400.webp" type="image/webp">
+                        <img aria-labelledby="poster1" class="evalPosters__imgWrapper--image" src="http://placehold.it/280x400.png" alt="">
+                    </picture>
+                </figure>
+                <div class="evalPosters__infoWrapper">
+                    <h3 id="poster1" class="evalPosters__infoWrapper--heading">신기전</h3>
+                    <span class="evalPosters__infoWrapper--released">2008</span>
+                    <div class="evalPosters__infoWrapper--stars">
+                        <span>★★★★★</span>
+                        <span>★★★★★</span>
+                    </div>
+                    <button class="evalPosters__infoWrapper--button">보고싶어요</button>
+                </div>
+            </li>
+            <li class="evalPosters--item" tabindex="0">
+                <figure class="evalPosters__imgWrapper">
+                    <picture>
+                        <source srcset="http://placehold.it/280x400.webp" type="image/webp">
+                        <img aria-labelledby="poster1" class="evalPosters__imgWrapper--image" src="http://placehold.it/280x400.png" alt="">
+                    </picture>
+                </figure>
+                <div class="evalPosters__infoWrapper">
+                    <h3 id="poster1" class="evalPosters__infoWrapper--heading">신기전</h3>
+                    <span class="evalPosters__infoWrapper--released">2008</span>
+                    <div class="evalPosters__infoWrapper--stars">
+                        <span>★★★★★</span>
+                        <span>★★★★★</span>
+                    </div>
+                    <button class="evalPosters__infoWrapper--button">보고싶어요</button>
+                </div>
+            </li>
+            <li class="evalPosters--item" tabindex="0">
+                <figure class="evalPosters__imgWrapper">
+                    <picture>
+                        <source srcset="http://placehold.it/280x400.webp" type="image/webp">
+                        <img aria-labelledby="poster1" class="evalPosters__imgWrapper--image" src="http://placehold.it/280x400.png" alt="">
+                    </picture>
+                </figure>
+                <div class="evalPosters__infoWrapper">
+                    <h3 id="poster1" class="evalPosters__infoWrapper--heading">신기전</h3>
+                    <span class="evalPosters__infoWrapper--released">2008</span>
+                    <div class="evalPosters__infoWrapper--stars">
+                        <span>★★★★★</span>
+                        <span>★★★★★</span>
+                    </div>
+                    <button class="evalPosters__infoWrapper--button">보고싶어요</button>
+                </div>
+            </li>
+            <li class="evalPosters--item" tabindex="0">
+                <figure class="evalPosters__imgWrapper">
+                    <picture>
+                        <source srcset="http://placehold.it/280x400.webp" type="image/webp">
+                        <img aria-labelledby="poster1" class="evalPosters__imgWrapper--image" src="http://placehold.it/280x400.png" alt="">
+                    </picture>
+                </figure>
+                <div class="evalPosters__infoWrapper">
+                    <h3 id="poster1" class="evalPosters__infoWrapper--heading">신기전</h3>
+                    <span class="evalPosters__infoWrapper--released">2008</span>
+                    <div class="evalPosters__infoWrapper--stars">
+                        <span>★★★★★</span>
+                        <span>★★★★★</span>
+                    </div>
+                    <button class="evalPosters__infoWrapper--button">보고싶어요</button>
+                </div>
+            </li>
+            <li class="evalPosters--item" tabindex="0">
+                <figure class="evalPosters__imgWrapper">
+                    <picture>
+                        <source srcset="http://placehold.it/280x400.webp" type="image/webp">
+                        <img aria-labelledby="poster1" class="evalPosters__imgWrapper--image" src="http://placehold.it/280x400.png" alt="">
+                    </picture>
+                </figure>
+                <div class="evalPosters__infoWrapper">
+                    <h3 id="poster1" class="evalPosters__infoWrapper--heading">신기전</h3>
+                    <span class="evalPosters__infoWrapper--released">2008</span>
+                    <div class="evalPosters__infoWrapper--stars">
+                        <span>★★★★★</span>
+                        <span>★★★★★</span>
+                    </div>
+                    <button class="evalPosters__infoWrapper--button">보고싶어요</button>
+                </div>
+            </li>
+            <li class="evalPosters--item" tabindex="0">
+                <figure class="evalPosters__imgWrapper">
+                    <picture>
+                        <source srcset="http://placehold.it/280x400.webp" type="image/webp">
+                        <img aria-labelledby="poster1" class="evalPosters__imgWrapper--image" src="http://placehold.it/280x400.png" alt="">
+                    </picture>
+                </figure>
+                <div class="evalPosters__infoWrapper">
+                    <h3 id="poster1" class="evalPosters__infoWrapper--heading">신기전</h3>
+                    <span class="evalPosters__infoWrapper--released">2008</span>
+                    <div class="evalPosters__infoWrapper--stars">
+                        <span>★★★★★</span>
+                        <span>★★★★★</span>
+                    </div>
+                    <button class="evalPosters__infoWrapper--button">보고싶어요</button>
+                </div>
+            </li>
+            <li class="evalPosters--item" tabindex="0">
+                <figure class="evalPosters__imgWrapper">
+                    <picture>
+                        <source srcset="http://placehold.it/280x400.webp" type="image/webp">
+                        <img aria-labelledby="poster1" class="evalPosters__imgWrapper--image" src="http://placehold.it/280x400.png" alt="">
+                    </picture>
+                </figure>
+                <div class="evalPosters__infoWrapper">
+                    <h3 id="poster1" class="evalPosters__infoWrapper--heading">신기전</h3>
+                    <span class="evalPosters__infoWrapper--released">2008</span>
+                    <div class="evalPosters__infoWrapper--stars">
+                        <span>★★★★★</span>
+                        <span>★★★★★</span>
+                    </div>
+                    <button class="evalPosters__infoWrapper--button">보고싶어요</button>
+                </div>
+            </li>
+            <li class="evalPosters--item" tabindex="0">
+                <figure class="evalPosters__imgWrapper">
+                    <picture>
+                        <source srcset="http://placehold.it/280x400.webp" type="image/webp">
+                        <img aria-labelledby="poster1" class="evalPosters__imgWrapper--image" src="http://placehold.it/280x400.png" alt="">
+                    </picture>
+                </figure>
+                <div class="evalPosters__infoWrapper">
+                    <h3 id="poster1" class="evalPosters__infoWrapper--heading">신기전</h3>
+                    <span class="evalPosters__infoWrapper--released">2008</span>
+                    <div class="evalPosters__infoWrapper--stars">
+                        <span>★★★★★</span>
+                        <span>★★★★★</span>
+                    </div>
+                    <button class="evalPosters__infoWrapper--button">보고싶어요</button>
+                </div>
+            </li>
+            <li class="evalPosters--item" tabindex="0">
+                <figure class="evalPosters__imgWrapper">
+                    <picture>
+                        <source srcset="http://placehold.it/280x400.webp" type="image/webp">
+                        <img aria-labelledby="poster1" class="evalPosters__imgWrapper--image" src="http://placehold.it/280x400.png" alt="">
+                    </picture>
+                </figure>
+                <div class="evalPosters__infoWrapper">
+                    <h3 id="poster1" class="evalPosters__infoWrapper--heading">신기전</h3>
+                    <span class="evalPosters__infoWrapper--released">2008</span>
+                    <div class="evalPosters__infoWrapper--stars">
+                        <span>★★★★★</span>
+                        <span>★★★★★</span>
+                    </div>
+                    <button class="evalPosters__infoWrapper--button">보고싶어요</button>
+                </div>
+            </li>
+            <li class="evalPosters--item" tabindex="0">
+                <figure class="evalPosters__imgWrapper">
+                    <picture>
+                        <source srcset="http://placehold.it/280x400.webp" type="image/webp">
+                        <img aria-labelledby="poster1" class="evalPosters__imgWrapper--image" src="http://placehold.it/280x400.png" alt="">
+                    </picture>
+                </figure>
+                <div class="evalPosters__infoWrapper">
+                    <h3 id="poster1" class="evalPosters__infoWrapper--heading">신기전</h3>
+                    <span class="evalPosters__infoWrapper--released">2008</span>
+                    <div class="evalPosters__infoWrapper--stars">
+                        <span>★★★★★</span>
+                        <span>★★★★★</span>
+                    </div>
+                    <button class="evalPosters__infoWrapper--button">보고싶어요</button>
+                </div>
+            </li>
+            <li class="evalPosters--item" tabindex="0">
+                <figure class="evalPosters__imgWrapper">
+                    <picture>
+                        <source srcset="http://placehold.it/280x400.webp" type="image/webp">
+                        <img aria-labelledby="poster1" class="evalPosters__imgWrapper--image" src="http://placehold.it/280x400.png" alt="">
+                    </picture>
+                </figure>
+                <div class="evalPosters__infoWrapper">
+                    <h3 id="poster1" class="evalPosters__infoWrapper--heading">신기전</h3>
+                    <span class="evalPosters__infoWrapper--released">2008</span>
+                    <div class="evalPosters__infoWrapper--stars">
+                        <span>★★★★★</span>
+                        <span>★★★★★</span>
+                    </div>
+                    <button class="evalPosters__infoWrapper--button">보고싶어요</button>
+                </div>
+            </li>
+            <li class="evalPosters--item" tabindex="0">
+                <figure class="evalPosters__imgWrapper">
+                    <picture>
+                        <source srcset="http://placehold.it/280x400.webp" type="image/webp">
+                        <img aria-labelledby="poster1" class="evalPosters__imgWrapper--image" src="http://placehold.it/280x400.png" alt="">
+                    </picture>
+                </figure>
+                <div class="evalPosters__infoWrapper">
+                    <h3 id="poster1" class="evalPosters__infoWrapper--heading">신기전</h3>
+                    <span class="evalPosters__infoWrapper--released">2008</span>
+                    <div class="evalPosters__infoWrapper--stars">
+                        <span>★★★★★</span>
+                        <span>★★★★★</span>
+                    </div>
+                    <button class="evalPosters__infoWrapper--button">보고싶어요</button>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <footer-component></footer-component>
+    <script src="./src/js/evaluate.js"></script>
+</body>
+
+</html>
