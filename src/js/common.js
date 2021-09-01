@@ -1,4 +1,4 @@
-(function () {
+export function commonFunc () {
     let bannerClose = document.querySelector('.topBanner--closeButton');
     let mainTabOpen = document.getElementsByClassName('tabMenu')[0];
     let mainTabs = document.querySelectorAll('.tabMenu__header');
@@ -135,4 +135,4 @@
         profileOpens.classList.remove('is-active');
         moMenu.classList.remove('is-active');
     })
-})();
+};

@@ -1,12 +1,13 @@
 const path = require("path");
 const webpack = require("webpack");
 const MiniCSSExtractPlugin = require("mini-css-extract-plugin");
+const CopyPlugin = require('copy-webpack-plugin');
 
 /* -------------------------------------------------------------------------- */
 
 module.exports = {
   target: "web",
-  mode: "development",
+  mode: "production",
   entry: {
     main: "./src/index.js",
   },
@@ -75,6 +76,18 @@ module.exports = {
     new MiniCSSExtractPlugin({
       linkType: false,
       filename: "css/style.css",
+    }),
+    new CopyPlugin({
+      patterns: [
+        {
+          from: path.join(__dirname, 'src/images'),
+          to: path.join(
+            __dirname,
+            `dist/assets`
+            // `${isDevelopment ? paths.dist : paths.build}/assets`
+          ),
+        },
+      ],
     }),
   ],
 };

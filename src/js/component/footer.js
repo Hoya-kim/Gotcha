@@ -1,4 +1,4 @@
-class Footer extends HTMLElement {
+export class Footer extends HTMLElement {
   constructor() {
     super();
   }
@@ -78,5 +78,3 @@ class Footer extends HTMLElement {
       `;
   }
 }
-
-customElements.define("footer-component", Footer);

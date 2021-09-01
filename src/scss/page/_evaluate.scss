@@ -4,13 +4,28 @@
 @use 'sass:math';
 
 .evalBanner {
+    position: relative;
     text-align: center;
     width: 100%;
-    position: fixed;
-    z-index: 10;
     padding: rem(20px);
     background-image: $lightblack;
     background-image: linear-gradient(to top, rgba(18, 18, 18, 0), rgba(18, 18, 18, 1) 20%);
+
+    &.is-active{
+        position: fixed;
+        left: 0;
+        right: 0;
+        z-index: 10;
+
+        @include desktop{
+            top:rem(72px);
+        }
+
+        @include mobile{
+            top: rem(64px);
+        }
+
+    }
 
     &--selected {
         display: block;
@@ -75,6 +90,20 @@
     &__container {
         padding: rem(150px) 2% 2% 2%;
         background-color: $lightblack;
+
+        @include desktop{
+            margin-top: rem(-72px);
+        }
+
+        @include mobile{
+            margin-top: rem(-64px);
+        }
+
+        &.is-active{
+            @include desktop{
+                padding-top:rem(222px);
+            }
+        }
     }
     
     &--list {

@@ -1,11 +1,10 @@
-class Header extends HTMLElement {
+export class Header extends HTMLElement {
   constructor() {
     super();
   }
 
   connectedCallback() {
     this.innerHTML = `
-    <header>
     <div class="skipNavigation">
     <a href="#continue">이어보기 바로가기</a>
     <a href="#wanted">보고싶어요 바로가기</a>
@@ -27,7 +26,7 @@ class Header extends HTMLElement {
     </h1>
     <nav>
         <h2 class="a11y-hidden">메인 메뉴</h2>
-        <div>
+        <div class="header__naviWrap">
             <button type="button" class="header--openButton">메뉴</button>
             <ul class="header__navigation">
                 <li class="header__navigation--item tabMenu">
@@ -156,7 +155,7 @@ class Header extends HTMLElement {
                     </ul>
                 </li>
                 <li class="header__navigation--item">
-                    <a href="#" class="header__navigation--link">평가하기</a>
+                    <a href="#" class="header__navigation--link eval-button">평가하기</a>
                 </li>
                 <li class="header__navigation--item">
                     <a href="#" class="header__navigation--link">보고싶어요</a>
@@ -221,5 +220,3 @@ class Header extends HTMLElement {
       `;
   }
 }
-
-customElements.define("header-component", Header);
