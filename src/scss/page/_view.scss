@@ -16,13 +16,16 @@
 /* 탭 리스트 */
 .viewTab {
   position: relative;
-  background: rgba(65, 65, 65, 0.1);
   @include mobile {
     padding-bottom: rem(30px);
   }
 
   @include desktop {
     padding-bottom: rem(50px);
+    
+    &.is-active{
+      background: rgba(0, 0, 0, 0.65);
+    }
   }
 
   &__list {
@@ -398,6 +401,7 @@
   @include desktop {
     flex-wrap: nowrap;
     overflow: hidden;
+    // width: rem(200px);
   }
 }
 
@@ -430,6 +434,12 @@
   &--wrap {
     font-size: rem(14px);
     font-weight: 400;
+
+    source, img {
+      @include desktop{
+        max-width: 100%;
+      }
+    }
 
     &--movieInfo {
       font-size: rem(14px);
