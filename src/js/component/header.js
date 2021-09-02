@@ -5,11 +5,6 @@ export class Header extends HTMLElement {
 
   connectedCallback() {
     this.innerHTML = `
-    <div class="skipNavigation">
-    <a href="#continue">이어보기 바로가기</a>
-    <a href="#wanted">보고싶어요 바로가기</a>
-    <a href="#trending">인기작 바로가기</a>
-</div>
 <div class="topBanner is-active">
     <p class="topBanner__desc">왓챠가 그립지 않으세요? 다시 돌아오셔서 모든 영화, 드라마 무제한으로 감상하세요.</p>
     <div class="topBanner__btnGroup">

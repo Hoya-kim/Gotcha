@@ -9,6 +9,13 @@ import { viewFunc } from './js/view'
 
 customElements.define("header-component", Header);
 customElements.define("footer-component", Footer);
+
 commonFunc();
-evalFunc();
-viewFunc();
+let path = document.location.pathname
+if(path === '/view.html') {
+    viewFunc();   
+}
+
+if(path === '/evaluate.html') {
+    evalFunc();
+}

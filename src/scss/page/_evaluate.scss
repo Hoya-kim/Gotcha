@@ -209,13 +209,32 @@
                 color: rgba(255, 255, 255, 0.2);
             }
 
-            & > span:last-child {
+            & > span:nth-child(2) {
                 display: block;
                 position: absolute;
                 top: 0;
                 color: $yellow;
                 overflow: hidden;
                 width: 0%;
+            }
+        }
+
+        &--star {
+            appearance: none;
+            cursor: pointer;
+            position: absolute;
+            top: 0;
+            width: 10%;
+            background-color: transparent;
+            height: 100%;
+
+            $numbers: 1,2,3,4,5,6,7,8,9,10;
+            
+            @each $number in $numbers {
+                $i: index($numbers, $number);
+                @at-root .star#{$i}{
+                    left: (($i - 1) * 10) * 1%;
+                }
             }
         }
 
