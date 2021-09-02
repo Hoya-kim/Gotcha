@@ -1,3 +1,4 @@
+import "@babel/polyfill";
 import '@webcomponents/custom-elements';
 
 import './scss/index.scss';
@@ -14,10 +15,10 @@ customElements.define("footer-component", Footer);
 
 commonFunc();
 let path = document.location.pathname
-if(path === '/view.html') {
+if(path.includes('/view')) {
     viewFunc();   
 }
 
-if(path === '/evaluate.html') {
+if(path.includes('/evaluate')) {
     evalFunc();
 }

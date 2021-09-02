@@ -70,12 +70,13 @@ module.exports = {
       },
       {
         test: /\.js$/,
-        include: path.join(__dirname),
+        include: path.join(__dirname, 'src/js'),
         exclude: /(node_modules)|(dist)/,
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['@babel/preset-env']
+            presets: ['@babel/preset-env'],
+            plugins: ['@babel/plugin-proposal-class-properties']
           }
         }
       },
