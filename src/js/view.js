@@ -12,21 +12,21 @@ export function viewFunc() {
       viewTabItems[i].classList.remove("is-active");
     }
     basicInfo.classList.add("is-active");
-    viewTab.setAttribute("style", "backdrop-filter:none;");
+    viewTab.classList.remove("is-active");
   });
   tabBtn[1].addEventListener("click", function (event) {
     for (let i = 0; i < viewTabItems.length; i++) {
       viewTabItems[i].classList.remove("is-active");
     }
     contentDetail.classList.add("is-active");
-    viewTab.setAttribute("style", "backdrop-filter:brightness(30%);");
+    viewTab.classList.add("is-active");
   });
   tabBtn[2].addEventListener("click", function (event) {
     for (let i = 0; i < viewTabItems.length; i++) {
       viewTabItems[i].classList.remove("is-active");
     }
     similarContent.classList.add("is-active");
-    viewTab.setAttribute("style", "backdrop-filter:brightness(30%);");
+    viewTab.classList.add("is-active");
   });
   //좋아요 버튼 업
 
