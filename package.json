@@ -2,7 +2,9 @@
   "name": "Gotcha",
   "version": "1.0.0",
   "main": "index.js",
-  "dependencies": {},
+  "dependencies": {
+    "@babel/polyfill": "^7.12.1"
+  },
   "devDependencies": {
     "autoprefixer": "^10.3.3",
     "copy-webpack-plugin": "^9.0.1",
