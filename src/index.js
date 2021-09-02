@@ -1,3 +1,5 @@
+import '@webcomponents/custom-elements';
+
 import './scss/index.scss';
 import { Header } from './js/component/header'
 import { Footer } from './js/component/footer';
