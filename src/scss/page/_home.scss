@@ -1,16 +1,25 @@
 @use "../utils" as *;
 
-// reset.css
+// reset
 figure {
     margin: 0;
 }
 h3 {
     margin: 0;
 }
-
 .hide {
     display: none;
 }
+.a11y-hidden {
+    overflow: hidden;
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+    clip-path: inset(50%);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+}
+
 
 .container {
     @include mobile {
@@ -51,6 +60,7 @@ h3 {
         display: block;
         // width: 100%;
         width: 100%;
+        max-width: 100%;
         animation: 3s ease-in-out scale2X forwards;
 
         @keyframes scale2X {
@@ -103,6 +113,17 @@ h3 {
         &--logo {
             width: 100%;
             margin-bottom: rem(10px);
+            max-width: 100%;
+        }
+        animation: 1.4s movetextX ease-in forwards;
+
+        @keyframes movetextX{
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
         }
     }
 
@@ -151,7 +172,8 @@ h3 {
         padding: rem(20px) rem(20px);
     }
     @include desktop {
-        margin-top: rem(-60px);
+        outline-offset: 2px;
+        margin-top: rem(-80px);
         // margin: rem(-60px) rem(20px) 0 rem(20px);
         &__box.inVisual {
             position: relative;
@@ -180,6 +202,7 @@ h3 {
         // border: 1px solid orange;
         margin-bottom: rem(20px);
         overflow: hidden;
+        padding: rem(20px) 0;
         // padding: 2vw;
 
         &--desc {
@@ -246,10 +269,26 @@ h3 {
 .movieList__detail {
     display: none;
 }
-.movieList__homeItem:hover, .movieList__ankor:focus {
+.movieList__homeItem:hover, 
+.movieList__homeItem:focus, 
+.movieList__ankor:hover,
+.movieList__ankor:focus {
+    z-index:20;
+    position: relative;
+    animation: mainMovie 0.4s ease-in-out both;
+    @keyframes mainMovie {
+        0% {
+            transform: scale(1.0);
+        }
+        100% {
+            transform: scale(1.2);
+        }
+    }
     .movieList__detail {
         @include desktop {
-            display: block;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             // position: absolute;
             // top: 0;
             // left: 0;
@@ -259,38 +298,53 @@ h3 {
             // font-size: rem(12px);
             
             &--run, &--desc {
-                background: rgba(255, 255, 255, 0.04);
+                // background: rgba(255, 255, 255, 0.04);
+                background: rgb(16 23 35 / 30%);
                 backdrop-filter: blur(5px);
-                padding: 5% 5%;
-                font-size: 1.4vw;
-                border-radius: rem(5px);
+                padding: 3% 3%;
+                font-size: 1.2vw;
+                border-radius: rem(10px);
                 &:hover, &:focus {
                     font-weight: 700;
-                    padding: 7% 7%;
-                    // color: $primary;
+                    padding-right: 10%;
+                    padding-left: 10%;
+                    color: $primary;
+                    border: 1px solid $primary;
                 }
-                transition: padding 0.2s ease;
+                transition: all 0.2s ease-in-out;
             }
             &--run {
+                display: none;
                 position: absolute;
                 left:0;
                 top: 50%;
                 transform: translateY(-50%);
                 background-color: rgba(20,21,23,0.15);
+                z-index:99;
             }
     
             &--desc {
                 position: absolute;
-                right:0;
+                // left: 32%;
+                // top: 65%;
                 top: 50%;
+                text-align: center;
                 transform: translateY(-50%);
-                background-color: rgba(20,21,23,0.15);
+                // background: rgb(16 23 35 / 71%);
+                z-index:99;
             }
         }
     }
 
     .movieList__homeItem--thumbnail {
         box-shadow: 0px 0px 20px black;
+        transition: all 0.4s;
+        max-width: 100%;
+        // &:hover {
+        //     transform: scale(1.2);
+        //     position: relative;
+        //     z-index:10;
+        // }
     }
 
     .movieList__homeWrap--desc {
