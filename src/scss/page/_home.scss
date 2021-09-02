@@ -63,10 +63,9 @@ h3 {
 
     &__mainImg {
         display: block;
-        // width: 100%;
-        width: 100%;
         max-width: 100%;
         animation: 3s ease-in-out scale2X forwards;
+        margin-left: auto;
 
         @keyframes scale2X {
             0% {

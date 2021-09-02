@@ -13,7 +13,7 @@ module.exports = {
     publicPath: "/",
     path: path.resolve(__dirname, "dist"),
     filename: "js/[name].bundle.js",
-    assetModuleFilename: "images/[name][ext]",
+    assetModuleFilename: "../images/[name][ext]",
   },
   module: {
     rules: [

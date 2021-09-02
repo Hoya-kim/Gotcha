@@ -1,15 +1,17 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ko">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>갓챠</title>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="description" content="K-netflix 왓챠 클론 프로젝트입니다.">
+  <meta name="keywords" content="GOTCHA,gotcha,갓챠,갓쨔,OTT,랜덤재생">
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <title>Gotcha</title>
   <link rel="stylesheet" href="dist/css/style.css">
   <script src="dist/js/main.bundle.js" type="text/javascript" defer></script>
 </head>
-
 <body>
   <header-component></header-component>
   <main class="main">
@@ -17,17 +19,14 @@
       <!-- 탭 리스트 -->
       <div class="viewTab">
         <ul class="viewTab__list" role="tablist">
-          <li class="viewTab__list--item btn-left">
-            <button class="viewTab-btnMove is-active" role="tab" tabindex="0" aria-selected="true" aria-controls="basicInfo"
-              id="tab-basic" data-tab="basicInfo">기본정보</button>
+          <li class="viewTab__list--item btn-left" role="tab" tabindex="0" aria-selected="true" aria-controls="basicInfo" data-tab="basicInfo">
+            <button class="viewTab-btnMove is-active" id="tab-basic">기본정보</button>
           </li>
-          <li class="viewTab__list--item btn-center">
-            <button class="viewTab-btnMove" role="tab" tabindex="-1" aria-selected="false" aria-controls="contentDetail"
-              id="tab-detail" data-tab="contentDetail">상세정보</button>
+          <li class="viewTab__list--item btn-center" role="tab" tabindex="-1" aria-selected="false" aria-controls="contentDetail" data-tab="contentDetail">
+            <button class="viewTab-btnMove" id="tab-detail">상세정보</button>
           </li>
-          <li class="viewTab__list--item btn-right">
-            <button class="viewTab-btnMove" role="tab" tabindex="-1" aria-selected="false"
-              aria-controls="similarContent" id="tab-similar" data-tab="similarContent">비슷한 작품</button>
+          <li class="viewTab__list--item btn-right" role="tab" tabindex="-1" aria-selected="false" aria-controls="similarContent" data-tab="similarContent">
+            <button class="viewTab-btnMove" id="tab-similar" >비슷한 작품</button>
           </li>
         </ul>
         <div class="viewTab__tabPanel current">
@@ -164,8 +163,8 @@
                 <a href="#" aria-label="POINT: MOVIE 재생하기">
                   <figure class="movieList__item--wrap">
                     <picture>
-                      <source srcset="./src/images/thumbnail/popcorn.webp" type="image/webp">
-                      <img class="movieList__item--thumbnail" src="./src/images/thumbnail/popcorn.png" alt="서프라이즈 팝콘">
+                      <source srcset="dist/assets/thumbnail/popcorn.webp" type="image/webp">
+                      <img class="movieList__item--thumbnail" src="dist/assets/thumbnail/popcorn.png" alt="서프라이즈 팝콘">
                     </picture>
                     <figcaption class="movieList__wrap--desc">
                       <p class="movieList__item--title">서프라이즈 팝콘</p>
@@ -185,8 +184,8 @@
                 <a href="#" aria-label="POINT: MOVIE 재생하기">
                   <figure class="movieList__item--wrap">
                     <picture>
-                      <source srcset="./src/images/thumbnail/lastfull.webp" type="image/webp">
-                      <img class="movieList__item--thumbnail" src="./src/images/thumbnail/lastfull.png" alt="라스트 풀 메져">
+                      <source srcset="dist/assets/thumbnail/lastfull.webp" type="image/webp">
+                      <img class="movieList__item--thumbnail" src="dist/assets/thumbnail/lastfull.png" alt="라스트 풀 메져">
                     </picture>
                     <figcaption class="movieList__wrap--desc">
                       <p class="movieList__item--title">라스트 풀 메져</p>
@@ -204,8 +203,8 @@
                 <a href="#" aria-label="POINT: MOVIE 재생하기">
                   <figure class="movieList__item--wrap">
                     <picture>
-                      <source srcset="./src/images/thumbnail/lalaland.webp" type="image/webp">
-                      <img class="movieList__item--thumbnail" src="./src/images/thumbnail/lalaland.png" alt="라라랜드">
+                      <source srcset="dist/assets/thumbnail/lalaland.webp" type="image/webp">
+                      <img class="movieList__item--thumbnail" src="dist/assets/thumbnail/lalaland.png" alt="라라랜드">
                     </picture>
                     <figcaption class="movieList__wrap--desc">
                       <p class="movieList__item--title">라라랜드</p>
@@ -223,9 +222,9 @@
                 <a href="#" aria-label="POINT: MOVIE 재생하기">
                   <figure class="movieList__item--wrap">
                     <picture>
-                      <source srcset="./src/images/thumbnail/ama.webp" type="image/webp">
+                      <source srcset="dist/assets/thumbnail/ama.webp" type="image/webp">
                       <img class="movieList__item--thumbnail"
-                        src="./src/images/thumbnail/ama.png" alt="아르마딜로">
+                        src="dist/assets/thumbnail/ama.png" alt="아르마딜로">
                     </picture>
                     <figcaption class="movieList__wrap--desc">
                       <p class="movieList__item--title">아르마딜로</p>

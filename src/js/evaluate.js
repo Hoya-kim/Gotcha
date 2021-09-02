@@ -3,7 +3,7 @@ export function evalFunc() {
   imgWrapper.forEach((el, i) => {
     const source = el.children[0].children[0]
     const img = el.children[0].children[1]
-    let rootPath = `/dist/assets/poster/`
+    let rootPath = `dist/assets/poster/`
     if(i+1 < 10) {
       source.srcset = `${rootPath}webp_eval0${i + 1}.webp`
       img.src = `${rootPath}png_eval0${i + 1}.png`
