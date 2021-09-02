@@ -197,7 +197,9 @@ body.is-active{
 
     &__naviWrap.is-active{
         .header__navigation{
-            display: block;
+            @include mobile{
+                display: block;
+            }
         }
     }
 

@@ -1,4 +1,5 @@
 export function commonFunc () {
+    let rootElement = document.documentElement;
     let bannerClose = document.querySelector('.topBanner--closeButton');
     let mainTabOpen = document.getElementsByClassName('tabMenu')[0];
     let mainTabs = document.querySelectorAll('.tabMenu__header');
@@ -13,7 +14,11 @@ export function commonFunc () {
     let profileOpenButton = profileOpens.querySelector('.header__userConfig--user');
     let lastElem = profileOpens.querySelectorAll('a');
     let lastTarget = lastElem[lastElem.length - 1];
-
+    let controller = document.querySelector('.controller');
+    let scrollToTopBtn = document.querySelector('.controller__topButton');
+    let footer = document.querySelector('.footer');
+    let footerHeight, winScrollTop, bodyHeight, value, winHeight;
+    let topButtonTimer;
 
     // 탑 배너 닫기
     bannerClose.addEventListener('click', function () {
@@ -79,8 +84,6 @@ export function commonFunc () {
     });
 
 
-
-
     // 탐색하게 탭 제어하기
     for (var i = 0; i < mainTabs.length; i++) {
         // 탭 요소에 클릭 이벤트 연결
@@ -135,4 +138,39 @@ export function commonFunc () {
         profileOpens.classList.remove('is-active');
         moMenu.classList.remove('is-active');
     })
+
+    // TOP 버튼 위치 제어
+    function topBtnPos(){
+        bodyHeight = document.body.clientHeight;
+        footerHeight = footer.clientHeight;
+        winScrollTop = window.scrollY;
+        winHeight = window.innerHeight;
+        value = bodyHeight - winHeight- footerHeight;
+
+        if(winScrollTop >= value){
+            controller.style.position = "absolute";
+            controller.style.bottom = footerHeight + 15 + 'px';
+        }else {
+            controller.style.position = "fixed";
+            controller.style.bottom = "3%";
+        }
+    }
+
+    window.addEventListener('scroll', function (){
+        clearTimeout(topButtonTimer);
+        topButtonTimer = setTimeout(function () {
+            topBtnPos();
+        }, 15);
+        // topBtnPos();
+    });
+
+    // TOP 버튼 클릭 이벤트
+    function scrollToTop(e) {
+        e.preventDefault();
+        rootElement.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        })
+    }
+    scrollToTopBtn.addEventListener("click", scrollToTop)
 };
