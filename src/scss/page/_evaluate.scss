@@ -8,7 +8,6 @@
     text-align: center;
     width: 100%;
     padding: rem(20px);
-    background-image: $lightblack;
     background-image: linear-gradient(to top, rgba(18, 18, 18, 0), rgba(18, 18, 18, 1) 20%);
 
     &.is-active{
@@ -93,10 +92,12 @@
 
         @include desktop{
             margin-top: rem(-72px);
+            padding-bottom: rem(60px);
         }
 
         @include mobile{
             margin-top: rem(-64px);
+            padding-bottom: rem(70px);
         }
 
         &.is-active{
@@ -109,8 +110,11 @@
     &--list {
         display: flex;
         flex-wrap: wrap;
-        
         justify-content: space-between;
+
+        @media screen and (min-width: 600px) and (max-width: 839px) {
+            justify-content: flex-start;
+        }
     }
 
     &--item {
@@ -157,7 +161,9 @@
         position: absolute;
         bottom: 0;
         width: 100%;
-        height: rem(160px);
+        height: 9.8958vw;
+        min-height: rem(170px);
+        max-height: rem(190px);
         text-align: center;
         background-color: $lightblack;
         // display: flex;

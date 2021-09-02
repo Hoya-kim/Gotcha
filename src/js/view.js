@@ -10,21 +10,27 @@ export function viewFunc() {
   tabBtn[0].addEventListener("click", function (event) {
     for (let i = 0; i < viewTabItems.length; i++) {
       viewTabItems[i].classList.remove("is-active");
+      tabBtn[i].classList.remove("is-active");
     }
+    this.classList.add("is-active");
     basicInfo.classList.add("is-active");
     viewTab.classList.remove("is-active");
   });
   tabBtn[1].addEventListener("click", function (event) {
     for (let i = 0; i < viewTabItems.length; i++) {
       viewTabItems[i].classList.remove("is-active");
+      tabBtn[i].classList.remove("is-active");
     }
+    this.classList.add("is-active");
     contentDetail.classList.add("is-active");
     viewTab.classList.add("is-active");
   });
   tabBtn[2].addEventListener("click", function (event) {
     for (let i = 0; i < viewTabItems.length; i++) {
       viewTabItems[i].classList.remove("is-active");
+      tabBtn[i].classList.remove("is-active");
     }
+    this.classList.add("is-active");
     similarContent.classList.add("is-active");
     viewTab.classList.add("is-active");
   });
