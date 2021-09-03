@@ -17,5 +17,9 @@ Watcha가 **웹 표준**과 **접근성**을 준수하고 있는지, **성능부
 
 ### 프로젝트 설계 기록
 
-[Gatcha - 갓쨔, Notion](https://hoyakim.notion.site/Gotcha-1b66d2f66632424993a667f55fedcdd9)
+[Gotcha - 갓쨔, Notion](https://hoyakim.notion.site/Gotcha-1b66d2f66632424993a667f55fedcdd9)
+
+### 발표 slide
+
+[Gotcha - slides.com](https://slides.com/hoya/gotcha)
 
