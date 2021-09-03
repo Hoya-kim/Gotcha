@@ -49,6 +49,14 @@ export function commonFunc () {
         moMenu.classList.add('is-active');
     });
 
+    moMenuButton.addEventListener('click', function (){
+        if(!moMenu.classList.contains('is-active')){
+            moMenu.classList.add('is-active');
+        }else{
+            moMenu.classList.remove('is-active');
+        }
+    });
+
     moMenu.addEventListener('mouseover', function (){
         moMenu.classList.add('is-active');
     });
@@ -121,6 +129,15 @@ export function commonFunc () {
 
     profileOpens.addEventListener('mouseleave', function (){
         this.classList.remove('is-active');
+    });
+
+    // 클릭 이벤트
+    profileOpenButton.addEventListener('click', function () {
+        if(this.parentNode.classList.contains('is-active')){
+            this.parentNode.classList.remove('is-active');
+        }else {
+            this.parentNode.classList.add('is-active');
+        }
     });
 
     // 키보드 포커스인

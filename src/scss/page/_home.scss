@@ -182,34 +182,6 @@ h3 {
         }
     }
 
-    &__box {
-        position: relative;
-        padding: rem(20px) rem(20px);
-    }
-
-    &__title {
-        font-size: rem(18px);
-        display: inline-block;
-        padding: rem(10px) 0;
-        @include mobile {
-            font-size: rem(14px);
-        }
-    }
-
-    &__homeWrap {
-        display: flex;
-        // border: 1px solid orange;
-        margin-bottom: rem(20px);
-        overflow: hidden;
-        padding: rem(20px) 0;
-        // padding: 2vw;
-
-        &--desc {
-            margin-top: rem(10px);
-            font-size: rem(16px);
-        }
-    }
-
     &__homeItem {
         padding: rem(2px);
         margin: rem(2px);
@@ -221,53 +193,54 @@ h3 {
             z-index: 20;
             position: relative;
             transform: scale(1.2);
+            @include mobile{
+                transform: scale(1.1);
+            }
 
             .movieList__detail {
-                @include desktop {
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    // position: absolute;
-                    // top: 0;
-                    // left: 0;
-                    // right: 0;
-                    // bottom: rem(18px);
-                    // border-radius: rem(5px);
-                    // font-size: rem(12px);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                // position: absolute;
+                // top: 0;
+                // left: 0;
+                // right: 0;
+                // bottom: rem(18px);
+                // border-radius: rem(5px);
+                // font-size: rem(12px);
 
-                    &--run, &--desc {
-                        position: absolute;
-                        top: 50%;
-                        left: 50%;
-                        transform: translate(-50%, -50%);
-                        backdrop-filter: blur(5px);
-                        padding: 3% 3%;
-                        font-size: rem(16px);
-                        border-radius: rem(10px);
-                        transition: all 0.2s;
-                        white-space: nowrap;
-                        //background: rgba(255, 255, 255, 0.04);
-                        background: rgba(16, 23, 35, 0.3);
-                        z-index: 99;
-                        margin-top: rem(-9px);
+                &--run, &--desc {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    backdrop-filter: blur(5px);
+                    padding: 3% 3%;
+                    font-size: rem(16px);
+                    border-radius: rem(10px);
+                    transition: all 0.2s;
+                    white-space: nowrap;
+                    //background: rgba(255, 255, 255, 0.04);
+                    background: rgba(16, 23, 35, 0.3);
+                    z-index: 99;
+                    margin-top: rem(-9px);
 
-                        &:hover, &:focus {
-                            font-weight: 700;
-                            padding-right: 10%;
-                            padding-left: 10%;
-                            color: $primary;
-                            border: 1px solid $primary;
-                        }
-
-                    }
-                    &--run {
-                        display: none;
-                        //left:0;
+                    &:hover, &:focus {
+                        font-weight: 700;
+                        padding-right: 10%;
+                        padding-left: 10%;
+                        color: $primary;
+                        border: 1px solid $primary;
                     }
 
-                    &--desc {
-                        text-align: center;
-                    }
+                }
+                &--run {
+                    display: none;
+                    //left:0;
+                }
+
+                &--desc {
+                    text-align: center;
                 }
             }
 
@@ -307,6 +280,34 @@ h3 {
             &--thumbnail {
                 width: 100%;
             }
+        }
+    }
+
+    &__box {
+        position: relative;
+        padding: rem(20px) rem(20px);
+    }
+
+    &__title {
+        font-size: rem(18px);
+        display: inline-block;
+        padding: rem(10px) 0;
+        @include mobile {
+            font-size: rem(14px);
+        }
+    }
+
+    &__homeWrap {
+        display: flex;
+        // border: 1px solid orange;
+        margin-bottom: rem(20px);
+        overflow: hidden;
+        padding: rem(20px) 0;
+        // padding: 2vw;
+
+        &--desc {
+            margin-top: rem(10px);
+            font-size: rem(16px);
         }
     }
 
