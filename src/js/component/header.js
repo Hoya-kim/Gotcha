@@ -150,10 +150,10 @@ export class Header extends HTMLElement {
                     </ul>
                 </li>
                 <li class="header__navigation--item">
-                    <a href="#" class="header__navigation--link eval-button">평가하기</a>
+                    <a href="evaluate.html" class="header__navigation--link eval-button">평가하기</a>
                 </li>
                 <li class="header__navigation--item">
-                    <a href="evaluate.html" class="header__navigation--link">보고싶어요</a>
+                    <a href="#" class="header__navigation--link">보고싶어요</a>
                 </li>
             </ul>
         </div>
