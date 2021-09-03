@@ -6,7 +6,7 @@ export class Footer extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
     <aside class="controller">
-    <a href="#" target="_blank" rel="noopener noreferrer" class="controller__random">
+    <a href="https://www.youtube.com/watch?v=ddoiaokwGC4" target="_blank" rel="noopener noreferrer" class="controller__random">
         <img src="dist/assets/common/img_gotcha_random.svg" alt="갓챠 랜덤플레이">
     </a>
     <a href="#" class="controller__topButton">페이지 TOP으로</a>
