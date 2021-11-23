@@ -1,24 +1,24 @@
-import "@babel/polyfill";
+import '@babel/polyfill';
 import '@webcomponents/custom-elements';
 
 import './scss/index.scss';
-import { Header } from './js/component/header'
+import { Header } from './js/component/header';
 import { Footer } from './js/component/footer';
-import { commonFunc } from './js/common'
+import { commonFunc } from './js/common';
 // import { homeFunc } from './js/home'
-import { evalFunc } from './js/evaluate'
-import { viewFunc } from './js/view'
+import { evalFunc } from './js/evaluate';
+import { viewFunc } from './js/view';
 // import './js/component';
 
-customElements.define("header-component", Header);
-customElements.define("footer-component", Footer);
+customElements.define('header-component', Header);
+customElements.define('footer-component', Footer);
 
 commonFunc();
-let path = document.location.pathname
-if(path.includes('/view')) {
-    viewFunc();   
+let path = document.location.pathname;
+if (path.includes('/view')) {
+  viewFunc();
 }
 
-if(path.includes('/evaluate')) {
-    evalFunc();
+if (path.includes('/evaluate')) {
+  evalFunc();
 }
