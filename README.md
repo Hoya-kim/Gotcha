@@ -1,17 +1,17 @@
 # Gotcha! - 갓쨔
 
-## 개요
+## 🥇 개요
 
 K-netfilx, [Watcha-왓챠](https://watcha.com/) 프론트 클론 프로젝트입니다.<br>
 Watcha가 **웹 표준**과 **접근성**을 준수하고 있는지, **성능부분**에서 놓치고 있는 부분이 있는지 분석 및 확인하여, 개선하는 것을 목표로 합니다. 🎯
 
 <br>
 
-### 탄생배경
+### 🌟 탄생배경
 
 - [Gotcha intro, youtube](https://www.youtube.com/watch?v=ddoiaokwGC4&ab_channel=%EC%BD%94%EB%A6%B0%EC%9D%B4)
 
-#### 주제 선정 배경
+#### ✅ 주제 선정 배경
 
 1. 미니 프로젝트를 시작했을때, 새로 페이지를 디자인해서 만들지 아니면 클론코딩을 할 지 고민을 많이했다. 사실 우리 팀만의 독자적인 사이트를 만들어보고싶었지만 너무나도 짧은 시간에 디자인에 너무 많은 시간을 빼앗길것 같다는 생각에 클론 코딩을 하기로 결정했다. 대신, 수업시간에 배웠던 것을 최대한 많이 활용하여 접근성과 성능을 개선시켜보기로 목표를 잡았다.
 2. 왓챠 팝콘먹다 왓챠 1개월 무료 감상권 쿠폰(?) 뽑고 팀원들이랑 너무 들떴다. 그래서 왓챠를 보려고하는데 로딩 시간이 너무 길어서 화가난 우리는 왓챠 클론 코딩을 하며 이런 부분을 우리가 개선시키고자했다.
@@ -19,7 +19,7 @@ Watcha가 **웹 표준**과 **접근성**을 준수하고 있는지, **성능부
 
 <br>
 
-### 프로젝트 기간
+### :calendar: 프로젝트 기간
 
 21.08.27 ~ 21.09.03
 
@@ -33,7 +33,7 @@ Watcha가 **웹 표준**과 **접근성**을 준수하고 있는지, **성능부
 
 ---
 
-## commit convention
+## 📘 commit convention
 
 `$ git commit`
 
@@ -58,7 +58,7 @@ Watcha가 **웹 표준**과 **접근성**을 준수하고 있는지, **성능부
 
 <br>
 
-### type 종류
+### 📗 type 종류
 
 ```
 feat: 새로운 기능을 추가
@@ -70,7 +70,7 @@ chore: 패키지 매니저 등 빌드 관련 설정 수정
 test: 테스트 코드 추가
 ```
 
-### Issue #num
+### 📙 Issue #num
 
 ```
 - Issue #13    # 평소 커밋시 사용 - 기능에 해당하는 이슈에 연결
@@ -95,9 +95,9 @@ test: 테스트 코드 추가
 
 ---
 
-## 브랜칭 및 PR 전략
+## 📌 브랜칭 및 PR 전략
 
-### git-flow를 경량화한 형태를 사용
+### 🪄 git-flow를 경량화한 형태를 사용
 
 - git-flow형태를 따르되 규모가 작은 토이 프로젝트이므로, 경량화한 형태를 사용
 
@@ -109,7 +109,7 @@ test: 테스트 코드 추가
 
 `fix-` : 버그 fix or hot fix시 사용할 브랜치
 
-### Pull Request 전략
+### 📤 Pull Request 전략
 
 `upstream-repo: develop` ←`forked-repo: develop`
 
@@ -118,7 +118,7 @@ test: 테스트 코드 추가
 
 ---
 
-### 기존 서비스의 문제점
+### 📍 기존 서비스의 문제점
 
 1. 성능 점수는 예상과도 같이 낮았다. (로딩속도가 10~15초 정도라서 web core vitals의 LCP 지표에 한참 미치지 못했다)
 2. 접근성 점수는 높음에도 불구하고 마크업은 전혀 시멘틱하지못했다 (div와 span이 대다수인 마크업)클래스 이름 또한 불분명하여 해당 마크업 구조를 전혀 파악할 수 없었다.
@@ -126,7 +126,7 @@ test: 테스트 코드 추가
 
 ---
 
-### Preview
+### 🖼 Preview
 
 #### 1. 메인 페이지
 
@@ -144,13 +144,13 @@ https://user-images.githubusercontent.com/41777022/142970614-cb4bacc9-d57e-4f93-
 
 ---
 
-### 프로젝트 설계 기록
+### 📝 프로젝트 설계 기록
 
 - [Gotcha - 갓쨔, Notion](https://hoyakim.notion.site/Gotcha-1b66d2f66632424993a667f55fedcdd9)
 
 <br>
 
-### 발표 slide
+### 🥇 발표 slide
 
 - [Gotcha - slides.com](https://slides.com/hoya/gotcha)
 
@@ -158,7 +158,7 @@ https://user-images.githubusercontent.com/41777022/142970614-cb4bacc9-d57e-4f93-
 
 ---
 
-### Team
+### 🎓 Team
 
 <table>
     <tr align="center">
