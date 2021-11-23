@@ -7,6 +7,15 @@ Watcha가 **웹 표준**과 **접근성**을 준수하고 있는지, **성능부
 
 <br>
 
+## 🚀 프로젝트 사용기술
+
+- HTML5 (customElement, ...)
+- CSS3 (Sass, PostCSS)
+- JavaScript
+- webpack, babel
+
+<br>
+
 ### 🌟 탄생배경
 
 - [Gotcha intro, youtube](https://www.youtube.com/watch?v=ddoiaokwGC4&ab_channel=%EC%BD%94%EB%A6%B0%EC%9D%B4)
@@ -116,6 +125,8 @@ test: 테스트 코드 추가
 1. 각자의 origin에서 기능 개발 완료 후 devlop으로 머지
 2. 각자의 develop에서 테스트 후 이상이 없으면 upstream의 develop으로 PR
 
+<br>
+
 ---
 
 ### 📍 기존 서비스의 문제점
@@ -123,6 +134,8 @@ test: 테스트 코드 추가
 1. 성능 점수는 예상과도 같이 낮았다. (로딩속도가 10~15초 정도라서 web core vitals의 LCP 지표에 한참 미치지 못했다)
 2. 접근성 점수는 높음에도 불구하고 마크업은 전혀 시멘틱하지못했다 (div와 span이 대다수인 마크업)클래스 이름 또한 불분명하여 해당 마크업 구조를 전혀 파악할 수 없었다.
 3. 탭 키 또한 논리적으로 이동하지않았고, 중간에 outline이 사라져 어디에 탭이 위치한지 파악하기도 힘들었고 어떤 부분은 탭키로 다가갈수도 없었다.
+
+<br>
 
 ---
 
