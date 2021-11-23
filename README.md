@@ -23,3 +23,17 @@ Watcha가 **웹 표준**과 **접근성**을 준수하고 있는지, **성능부
 
 [Gotcha - slides.com](https://slides.com/hoya/gotcha)
 
+
+### Preview
+
+#### 1. 메인 페이지
+
+https://user-images.githubusercontent.com/41777022/142970648-a50d24e8-66e4-441f-a613-7209cef74617.mp4
+
+#### 2. 뷰 페이지
+
+https://user-images.githubusercontent.com/41777022/142970593-64304480-15e3-4715-b1f2-07bf4008c0a0.mp4
+
+#### 3. 평가하기 페이지
+
+https://user-images.githubusercontent.com/41777022/142970614-cb4bacc9-d57e-4f93-b956-3357b9949d68.mp4
