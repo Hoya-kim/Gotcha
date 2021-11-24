@@ -193,33 +193,7 @@ https://user-images.githubusercontent.com/41777022/142970614-cb4bacc9-d57e-4f93-
 
 ### 🎓 Team
 
-<table>
-    <tr align="center">
-        <td><B>김정호<B></td>
-        <td><B>박바름<B></td>
-        <td><B>박지영<B></td>
-        <td><B>박태준<B></td>
-    </tr>
-    <tr align="center">
-        <td>
-            <img src="https://github.com/hoya-kim.png?size=100" style="width:100px; height:100px;">
-            <br>
-            <a href="https://github.com/hoya-kim"><I>Hoya-kim</I></a>
-        </td>
-        <td>
-            <img src="https://github.com/congaweb.png?size=100" style="width:100px; height:100px;">
-            <br>
-            <a href="https://github.com/congaweb"><I>congaweb</I></a>
-        </td>
-        <td>
-            <img src="https://github.com/kkdd0757.png?size=100" style="width:100px; height:100px;">
-            <br>
-            <a href="https://github.com/kkdd0757"><I>kkdd0757</I></a>
-        </td>
-        <td>
-            <img src="https://github.com/joker77z.png?size=100" style="width:100px; height:100px;">
-            <br>
-            <a href="https://github.com/joker77z"><I>joker77z</I></a>
-        </td>
-    </tr>
-</table>
+| 김정호 | 박바름 | 박지영 | 박태준 |
+| :--------: | :--------: | :--------: | :--------: |
+| [@Hoya-kim](https://github.com/hoya-kim) | [@congaweb](https://github.com/congaweb) | [@kkdd0757](https://github.com/kkdd0757) | [@joker77z](https://github.com/joker77z) | 
+| <img src="https://avatars.githubusercontent.com/hoya-kim" width="100">     | <img src="https://avatars.githubusercontent.com/congaweb" width="100">      | <img src="https://avatars.githubusercontent.com/kkdd0757" width="100">      | <img src="https://avatars.githubusercontent.com/joker77z" width="100"> |
